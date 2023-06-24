@@ -15,8 +15,7 @@ namespace EduBrilliant
 {
    public partial class FrmLogin : Form
    {
-
-      SqlConnection cn;
+      public static SqlConnection cn;
       SqlCommand cmd;
       SqlDataReader dr;
 
@@ -27,10 +26,10 @@ namespace EduBrilliant
 
       private void FrmLogin_Load(object sender, EventArgs e)
       {
-         //cn = new MySqlConnection(@"Server=localhost;Database=silelangonline;Uid=root;Pwd=root;");
-         //cn.Open();
+			cn = new SqlConnection(@"Data Source=DESKTOP-6I160VI\SQLEXPRESS;Initial Catalog=GrandHotel;integrated security=true;");
+			cn.Open();
 
-         Height = 446;
+			Height = 446;
       }
 
       private void ClearFields()
