@@ -3,7 +3,7 @@ create table [User] (
 	NamaLengkap varchar(100) not null,
 	Username varchar(100) not null,
 	Password varchar(100) not null,
-	NoTelp int not null,
+	NoTelp varchar(15) not null,
 	Email varchar(100) null,
 	Role varchar(15) not null,
 )
@@ -15,8 +15,10 @@ create table Kategori (
 
 create Table Kelas (
 	ID int not null primary key identity,
+	KategoriID int not null,
 	Nama varchar(100) not null,
-	Harga int not null
+	Harga int not null,
+	constraint FK_Kelas_KategoriID foreign key (KategoriID) references Kategori(ID)
 )
 
 create Table Transaksi (
@@ -33,11 +35,11 @@ create Table Transaksi (
 create table Soal (
 	ID int Not null primary key identity,
 	Nama varchar(50) not null,
-	KategoriID int not null,
+	KelasID int not null,
 	Waktu int not null,
 	Deadline datetime not null,
 	MaxScore int not null,
-	constraint FK_Soal_KategoriID foreign key (KategoriID) references Kategori(ID)
+	constraint FK_Soal_KelasID foreign key (KelasID) references Kelas(ID)
 )
 
 create table Score (

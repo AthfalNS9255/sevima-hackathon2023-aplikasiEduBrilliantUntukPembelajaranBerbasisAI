@@ -45,7 +45,7 @@ namespace EduBrilliant
 			this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-			this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+			this.PnlContainer = new Guna.UI2.WinForms.Guna2ShadowPanel();
 			this.guna2Panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -165,6 +165,7 @@ namespace EduBrilliant
 			this.btnGuru.Text = "Guru";
 			this.btnGuru.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
 			this.btnGuru.TextOffset = new System.Drawing.Point(6, 0);
+			this.btnGuru.Click += new System.EventHandler(this.btnGuru_Click);
 			// 
 			// btnDashboard
 			// 
@@ -268,20 +269,20 @@ namespace EduBrilliant
 			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
 			this.guna2ControlBox3.TabIndex = 4;
 			// 
-			// guna2ShadowPanel1
+			// PnlContainer
 			// 
-			this.guna2ShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.PnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-			this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-			this.guna2ShadowPanel1.Location = new System.Drawing.Point(243, 53);
-			this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-			this.guna2ShadowPanel1.Radius = 6;
-			this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-			this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-			this.guna2ShadowPanel1.Size = new System.Drawing.Size(675, 579);
-			this.guna2ShadowPanel1.TabIndex = 5;
+			this.PnlContainer.BackColor = System.Drawing.Color.Transparent;
+			this.PnlContainer.FillColor = System.Drawing.Color.White;
+			this.PnlContainer.Location = new System.Drawing.Point(243, 53);
+			this.PnlContainer.Name = "PnlContainer";
+			this.PnlContainer.Radius = 6;
+			this.PnlContainer.ShadowColor = System.Drawing.Color.Black;
+			this.PnlContainer.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+			this.PnlContainer.Size = new System.Drawing.Size(675, 579);
+			this.PnlContainer.TabIndex = 5;
 			// 
 			// FrmMainAdmin
 			// 
@@ -289,7 +290,7 @@ namespace EduBrilliant
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(929, 644);
-			this.Controls.Add(this.guna2ShadowPanel1);
+			this.Controls.Add(this.PnlContainer);
 			this.Controls.Add(this.guna2ControlBox3);
 			this.Controls.Add(this.guna2ControlBox2);
 			this.Controls.Add(this.guna2ControlBox1);
@@ -320,7 +321,7 @@ namespace EduBrilliant
       private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
       private System.Windows.Forms.ToolTip toolTip1;
       private Guna.UI2.WinForms.Guna2Button btnLogOut;
-		private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+		private Guna.UI2.WinForms.Guna2ShadowPanel PnlContainer;
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
 		public Guna.UI2.WinForms.Guna2Button btnKategori;
 	}

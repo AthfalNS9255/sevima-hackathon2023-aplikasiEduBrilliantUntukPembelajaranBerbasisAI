@@ -43,13 +43,14 @@ namespace EduBrilliant
 			this.label1 = new System.Windows.Forms.Label();
 			this.pnlRegister = new Guna.UI2.WinForms.Guna2ShadowPanel();
 			this.txtNoTelpReg = new Guna.UI2.WinForms.Guna2TextBox();
-			this.txtUsernameReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.txtConfirmPasswordReg = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtPasswordReg = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtEmailReg = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtUsernameReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.btnNavLogin = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
 			this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
 			this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
-			this.txtPasswordReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.txtNamaLengkapReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
 			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -239,12 +240,13 @@ namespace EduBrilliant
 			// 
 			this.pnlRegister.BackColor = System.Drawing.Color.Transparent;
 			this.pnlRegister.Controls.Add(this.txtNoTelpReg);
-			this.pnlRegister.Controls.Add(this.txtUsernameReg);
 			this.pnlRegister.Controls.Add(this.txtConfirmPasswordReg);
+			this.pnlRegister.Controls.Add(this.txtPasswordReg);
+			this.pnlRegister.Controls.Add(this.txtEmailReg);
+			this.pnlRegister.Controls.Add(this.txtUsernameReg);
 			this.pnlRegister.Controls.Add(this.btnNavLogin);
 			this.pnlRegister.Controls.Add(this.guna2Panel2);
 			this.pnlRegister.Controls.Add(this.btnRegister);
-			this.pnlRegister.Controls.Add(this.txtPasswordReg);
 			this.pnlRegister.Controls.Add(this.txtNamaLengkapReg);
 			this.pnlRegister.FillColor = System.Drawing.Color.White;
 			this.pnlRegister.Location = new System.Drawing.Point(12, 98);
@@ -252,7 +254,7 @@ namespace EduBrilliant
 			this.pnlRegister.Radius = 7;
 			this.pnlRegister.ShadowColor = System.Drawing.Color.Black;
 			this.pnlRegister.ShadowShift = 6;
-			this.pnlRegister.Size = new System.Drawing.Size(410, 454);
+			this.pnlRegister.Size = new System.Drawing.Size(410, 471);
 			this.pnlRegister.TabIndex = 6;
 			this.pnlRegister.Visible = false;
 			// 
@@ -270,14 +272,89 @@ namespace EduBrilliant
 			this.txtNoTelpReg.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.txtNoTelpReg.ForeColor = System.Drawing.Color.Black;
 			this.txtNoTelpReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtNoTelpReg.Location = new System.Drawing.Point(75, 304);
+			this.txtNoTelpReg.Location = new System.Drawing.Point(75, 259);
 			this.txtNoTelpReg.Name = "txtNoTelpReg";
 			this.txtNoTelpReg.PasswordChar = '\0';
 			this.txtNoTelpReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
 			this.txtNoTelpReg.PlaceholderText = "No. Telp";
 			this.txtNoTelpReg.SelectedText = "";
 			this.txtNoTelpReg.Size = new System.Drawing.Size(268, 36);
-			this.txtNoTelpReg.TabIndex = 8;
+			this.txtNoTelpReg.TabIndex = 3;
+			// 
+			// txtConfirmPasswordReg
+			// 
+			this.txtConfirmPasswordReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtConfirmPasswordReg.BorderRadius = 10;
+			this.txtConfirmPasswordReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtConfirmPasswordReg.DefaultText = "";
+			this.txtConfirmPasswordReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtConfirmPasswordReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtConfirmPasswordReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtConfirmPasswordReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtConfirmPasswordReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtConfirmPasswordReg.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.txtConfirmPasswordReg.ForeColor = System.Drawing.Color.Black;
+			this.txtConfirmPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtConfirmPasswordReg.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+			this.txtConfirmPasswordReg.IconRightOffset = new System.Drawing.Point(4, 0);
+			this.txtConfirmPasswordReg.Location = new System.Drawing.Point(75, 349);
+			this.txtConfirmPasswordReg.Name = "txtConfirmPasswordReg";
+			this.txtConfirmPasswordReg.PasswordChar = '●';
+			this.txtConfirmPasswordReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtConfirmPasswordReg.PlaceholderText = "Confirm Password";
+			this.txtConfirmPasswordReg.SelectedText = "";
+			this.txtConfirmPasswordReg.Size = new System.Drawing.Size(268, 36);
+			this.txtConfirmPasswordReg.TabIndex = 5;
+			this.txtConfirmPasswordReg.UseSystemPasswordChar = true;
+			// 
+			// txtPasswordReg
+			// 
+			this.txtPasswordReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtPasswordReg.BorderRadius = 10;
+			this.txtPasswordReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtPasswordReg.DefaultText = "";
+			this.txtPasswordReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtPasswordReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtPasswordReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtPasswordReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtPasswordReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtPasswordReg.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.txtPasswordReg.ForeColor = System.Drawing.Color.Black;
+			this.txtPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtPasswordReg.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+			this.txtPasswordReg.IconRightOffset = new System.Drawing.Point(4, 0);
+			this.txtPasswordReg.Location = new System.Drawing.Point(75, 304);
+			this.txtPasswordReg.Name = "txtPasswordReg";
+			this.txtPasswordReg.PasswordChar = '●';
+			this.txtPasswordReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtPasswordReg.PlaceholderText = "Password";
+			this.txtPasswordReg.SelectedText = "";
+			this.txtPasswordReg.Size = new System.Drawing.Size(268, 36);
+			this.txtPasswordReg.TabIndex = 4;
+			this.txtPasswordReg.UseSystemPasswordChar = true;
+			// 
+			// txtEmailReg
+			// 
+			this.txtEmailReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtEmailReg.BorderRadius = 10;
+			this.txtEmailReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtEmailReg.DefaultText = "";
+			this.txtEmailReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtEmailReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtEmailReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtEmailReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtEmailReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtEmailReg.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.txtEmailReg.ForeColor = System.Drawing.Color.Black;
+			this.txtEmailReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtEmailReg.Location = new System.Drawing.Point(75, 214);
+			this.txtEmailReg.Name = "txtEmailReg";
+			this.txtEmailReg.PasswordChar = '\0';
+			this.txtEmailReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtEmailReg.PlaceholderText = "Email";
+			this.txtEmailReg.SelectedText = "";
+			this.txtEmailReg.Size = new System.Drawing.Size(268, 36);
+			this.txtEmailReg.TabIndex = 2;
 			// 
 			// txtUsernameReg
 			// 
@@ -300,33 +377,7 @@ namespace EduBrilliant
 			this.txtUsernameReg.PlaceholderText = "Username";
 			this.txtUsernameReg.SelectedText = "";
 			this.txtUsernameReg.Size = new System.Drawing.Size(268, 36);
-			this.txtUsernameReg.TabIndex = 7;
-			// 
-			// txtConfirmPasswordReg
-			// 
-			this.txtConfirmPasswordReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtConfirmPasswordReg.BorderRadius = 10;
-			this.txtConfirmPasswordReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtConfirmPasswordReg.DefaultText = "";
-			this.txtConfirmPasswordReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtConfirmPasswordReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtConfirmPasswordReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtConfirmPasswordReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtConfirmPasswordReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtConfirmPasswordReg.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.txtConfirmPasswordReg.ForeColor = System.Drawing.Color.Black;
-			this.txtConfirmPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtConfirmPasswordReg.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-			this.txtConfirmPasswordReg.IconRightOffset = new System.Drawing.Point(4, 0);
-			this.txtConfirmPasswordReg.Location = new System.Drawing.Point(75, 259);
-			this.txtConfirmPasswordReg.Name = "txtConfirmPasswordReg";
-			this.txtConfirmPasswordReg.PasswordChar = '●';
-			this.txtConfirmPasswordReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtConfirmPasswordReg.PlaceholderText = "Confirm Password";
-			this.txtConfirmPasswordReg.SelectedText = "";
-			this.txtConfirmPasswordReg.Size = new System.Drawing.Size(268, 36);
-			this.txtConfirmPasswordReg.TabIndex = 6;
-			this.txtConfirmPasswordReg.UseSystemPasswordChar = true;
+			this.txtUsernameReg.TabIndex = 0;
 			// 
 			// btnNavLogin
 			// 
@@ -392,38 +443,12 @@ namespace EduBrilliant
 			this.btnRegister.HoverState.BorderColor = System.Drawing.Color.Black;
 			this.btnRegister.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
 			this.btnRegister.HoverState.ForeColor = System.Drawing.Color.White;
-			this.btnRegister.Location = new System.Drawing.Point(75, 352);
+			this.btnRegister.Location = new System.Drawing.Point(75, 395);
 			this.btnRegister.Name = "btnRegister";
 			this.btnRegister.Size = new System.Drawing.Size(268, 36);
-			this.btnRegister.TabIndex = 4;
+			this.btnRegister.TabIndex = 6;
 			this.btnRegister.Text = "Registrasi";
 			this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-			// 
-			// txtPasswordReg
-			// 
-			this.txtPasswordReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtPasswordReg.BorderRadius = 10;
-			this.txtPasswordReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtPasswordReg.DefaultText = "";
-			this.txtPasswordReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtPasswordReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtPasswordReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtPasswordReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtPasswordReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtPasswordReg.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.txtPasswordReg.ForeColor = System.Drawing.Color.Black;
-			this.txtPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtPasswordReg.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-			this.txtPasswordReg.IconRightOffset = new System.Drawing.Point(4, 0);
-			this.txtPasswordReg.Location = new System.Drawing.Point(75, 214);
-			this.txtPasswordReg.Name = "txtPasswordReg";
-			this.txtPasswordReg.PasswordChar = '●';
-			this.txtPasswordReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtPasswordReg.PlaceholderText = "Password";
-			this.txtPasswordReg.SelectedText = "";
-			this.txtPasswordReg.Size = new System.Drawing.Size(268, 36);
-			this.txtPasswordReg.TabIndex = 2;
-			this.txtPasswordReg.UseSystemPasswordChar = true;
 			// 
 			// txtNamaLengkapReg
 			// 
@@ -478,11 +503,11 @@ namespace EduBrilliant
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(434, 565);
-			this.Controls.Add(this.pnlRegister);
+			this.ClientSize = new System.Drawing.Size(434, 581);
 			this.Controls.Add(this.guna2PictureBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ControlBoxClose);
+			this.Controls.Add(this.pnlRegister);
 			this.Controls.Add(this.pnlLogin);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FrmLogin";
@@ -516,12 +541,13 @@ namespace EduBrilliant
       private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
       private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
       private Guna.UI2.WinForms.Guna2Button btnRegister;
-      private Guna.UI2.WinForms.Guna2TextBox txtPasswordReg;
       private Guna.UI2.WinForms.Guna2TextBox txtNamaLengkapReg;
-      private Guna.UI2.WinForms.Guna2TextBox txtNoTelpReg;
+      private Guna.UI2.WinForms.Guna2TextBox txtEmailReg;
       private Guna.UI2.WinForms.Guna2TextBox txtUsernameReg;
-      private Guna.UI2.WinForms.Guna2TextBox txtConfirmPasswordReg;
       private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-   }
+		private Guna.UI2.WinForms.Guna2TextBox txtNoTelpReg;
+		private Guna.UI2.WinForms.Guna2TextBox txtConfirmPasswordReg;
+		private Guna.UI2.WinForms.Guna2TextBox txtPasswordReg;
+	}
 }
 

@@ -29,108 +29,40 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.Label emailLabel;
 			System.Windows.Forms.Label namaLengkapLabel;
 			System.Windows.Forms.Label noTelpLabel;
 			System.Windows.Forms.Label passwordLabel;
 			System.Windows.Forms.Label usernameLabel;
 			System.Windows.Forms.Label label1;
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			this.dgvGuru = new System.Windows.Forms.DataGridView();
+			this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
+			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+			this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+			this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+			this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+			this.txtUsername = new System.Windows.Forms.TextBox();
+			this.txtPassword = new System.Windows.Forms.TextBox();
+			this.txtNoTelp = new System.Windows.Forms.TextBox();
+			this.txtNamaLengkap = new System.Windows.Forms.TextBox();
+			this.txtEmail = new System.Windows.Forms.TextBox();
+			this.txtConfirmPassword = new System.Windows.Forms.TextBox();
 			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.userDataGridView = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-			this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-			this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-			this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-			this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-			this.usernameTextBox = new System.Windows.Forms.TextBox();
-			this.passwordTextBox = new System.Windows.Forms.TextBox();
-			this.noTelpTextBox = new System.Windows.Forms.TextBox();
-			this.namaLengkapTextBox = new System.Windows.Forms.TextBox();
-			this.emailTextBox = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
 			emailLabel = new System.Windows.Forms.Label();
 			namaLengkapLabel = new System.Windows.Forms.Label();
 			noTelpLabel = new System.Windows.Forms.Label();
 			passwordLabel = new System.Windows.Forms.Label();
 			usernameLabel = new System.Windows.Forms.Label();
 			label1 = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// GuruBindingSource
-			// 
-			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
-			this.GuruBindingSource.Filter = "Role = \'Guru\'";
-			// 
-			// userDataGridView
-			// 
-			this.userDataGridView.AllowUserToAddRows = false;
-			this.userDataGridView.AllowUserToDeleteRows = false;
-			this.userDataGridView.AllowUserToOrderColumns = true;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-			this.userDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.userDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.userDataGridView.AutoGenerateColumns = false;
-			this.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.userDataGridView.BackgroundColor = System.Drawing.Color.White;
-			this.userDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.userDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-			this.userDataGridView.DataSource = this.GuruBindingSource;
-			this.userDataGridView.Location = new System.Drawing.Point(3, 3);
-			this.userDataGridView.Name = "userDataGridView";
-			this.userDataGridView.ReadOnly = true;
-			this.userDataGridView.RowHeadersVisible = false;
-			this.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.userDataGridView.Size = new System.Drawing.Size(669, 280);
-			this.userDataGridView.TabIndex = 0;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaLengkap";
-			this.dataGridViewTextBoxColumn2.HeaderText = "NamaLengkap";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "Username";
-			this.dataGridViewTextBoxColumn3.HeaderText = "Username";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this.dataGridViewTextBoxColumn5.DataPropertyName = "NoTelp";
-			this.dataGridViewTextBoxColumn5.HeaderText = "NoTelp";
-			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-			this.dataGridViewTextBoxColumn5.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
-			this.dataGridViewTextBoxColumn6.HeaderText = "Email";
-			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-			this.dataGridViewTextBoxColumn6.ReadOnly = true;
 			// 
 			// emailLabel
 			// 
@@ -198,197 +130,280 @@
 			label1.TabIndex = 15;
 			label1.Text = "Confirm Password:";
 			// 
-			// guna2Button1
+			// dgvGuru
 			// 
-			this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2Button1.BorderRadius = 3;
-			this.guna2Button1.BorderThickness = 1;
-			this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.guna2Button1.FillColor = System.Drawing.Color.White;
-			this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-			this.guna2Button1.Location = new System.Drawing.Point(495, 346);
-			this.guna2Button1.Name = "guna2Button1";
-			this.guna2Button1.Size = new System.Drawing.Size(104, 28);
-			this.guna2Button1.TabIndex = 17;
-			this.guna2Button1.Text = "Insert";
-			// 
-			// guna2Button2
-			// 
-			this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2Button2.BorderRadius = 3;
-			this.guna2Button2.BorderThickness = 1;
-			this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.guna2Button2.FillColor = System.Drawing.Color.White;
-			this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-			this.guna2Button2.Location = new System.Drawing.Point(495, 392);
-			this.guna2Button2.Name = "guna2Button2";
-			this.guna2Button2.Size = new System.Drawing.Size(104, 28);
-			this.guna2Button2.TabIndex = 18;
-			this.guna2Button2.Text = "Update";
-			// 
-			// guna2Button3
-			// 
-			this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2Button3.BorderRadius = 3;
-			this.guna2Button3.BorderThickness = 1;
-			this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.guna2Button3.FillColor = System.Drawing.Color.White;
-			this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-			this.guna2Button3.Location = new System.Drawing.Point(495, 438);
-			this.guna2Button3.Name = "guna2Button3";
-			this.guna2Button3.Size = new System.Drawing.Size(104, 28);
-			this.guna2Button3.TabIndex = 19;
-			this.guna2Button3.Text = "Delete";
-			// 
-			// guna2Button4
-			// 
-			this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2Button4.BorderRadius = 3;
-			this.guna2Button4.BorderThickness = 1;
-			this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.guna2Button4.FillColor = System.Drawing.Color.CornflowerBlue;
-			this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2Button4.ForeColor = System.Drawing.Color.White;
-			this.guna2Button4.Location = new System.Drawing.Point(441, 487);
-			this.guna2Button4.Name = "guna2Button4";
-			this.guna2Button4.Size = new System.Drawing.Size(104, 28);
-			this.guna2Button4.TabIndex = 20;
-			this.guna2Button4.Text = "Save";
-			// 
-			// guna2Button5
-			// 
-			this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2Button5.BorderRadius = 3;
-			this.guna2Button5.BorderThickness = 1;
-			this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.guna2Button5.FillColor = System.Drawing.Color.OrangeRed;
-			this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2Button5.ForeColor = System.Drawing.Color.White;
-			this.guna2Button5.Location = new System.Drawing.Point(551, 487);
-			this.guna2Button5.Name = "guna2Button5";
-			this.guna2Button5.Size = new System.Drawing.Size(104, 28);
-			this.guna2Button5.TabIndex = 21;
-			this.guna2Button5.Text = "Cancel";
-			// 
-			// usernameTextBox
-			// 
-			this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.dgvGuru.AllowUserToAddRows = false;
+			this.dgvGuru.AllowUserToDeleteRows = false;
+			this.dgvGuru.AllowUserToOrderColumns = true;
+			this.dgvGuru.AllowUserToResizeRows = false;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.dgvGuru.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+			this.dgvGuru.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Username", true));
-			this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.usernameTextBox.Location = new System.Drawing.Point(191, 367);
-			this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6);
-			this.usernameTextBox.Name = "usernameTextBox";
-			this.usernameTextBox.Size = new System.Drawing.Size(221, 25);
-			this.usernameTextBox.TabIndex = 14;
+			this.dgvGuru.AutoGenerateColumns = false;
+			this.dgvGuru.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvGuru.BackgroundColor = System.Drawing.Color.White;
+			this.dgvGuru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvGuru.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+			this.dgvGuru.DataSource = this.GuruBindingSource;
+			this.dgvGuru.Location = new System.Drawing.Point(3, 3);
+			this.dgvGuru.Name = "dgvGuru";
+			this.dgvGuru.ReadOnly = true;
+			this.dgvGuru.RowHeadersVisible = false;
+			this.dgvGuru.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvGuru.Size = new System.Drawing.Size(669, 280);
+			this.dgvGuru.TabIndex = 0;
 			// 
-			// passwordTextBox
+			// btnInsert
 			// 
-			this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnInsert.BorderRadius = 3;
+			this.btnInsert.BorderThickness = 1;
+			this.btnInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnInsert.FillColor = System.Drawing.Color.White;
+			this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnInsert.ForeColor = System.Drawing.Color.Black;
+			this.btnInsert.Location = new System.Drawing.Point(495, 346);
+			this.btnInsert.Name = "btnInsert";
+			this.btnInsert.Size = new System.Drawing.Size(104, 28);
+			this.btnInsert.TabIndex = 17;
+			this.btnInsert.Text = "Insert";
+			this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+			// 
+			// btnUpdate
+			// 
+			this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnUpdate.BorderRadius = 3;
+			this.btnUpdate.BorderThickness = 1;
+			this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnUpdate.FillColor = System.Drawing.Color.White;
+			this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+			this.btnUpdate.Location = new System.Drawing.Point(495, 392);
+			this.btnUpdate.Name = "btnUpdate";
+			this.btnUpdate.Size = new System.Drawing.Size(104, 28);
+			this.btnUpdate.TabIndex = 18;
+			this.btnUpdate.Text = "Update";
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnDelete.BorderRadius = 3;
+			this.btnDelete.BorderThickness = 1;
+			this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnDelete.FillColor = System.Drawing.Color.White;
+			this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnDelete.ForeColor = System.Drawing.Color.Black;
+			this.btnDelete.Location = new System.Drawing.Point(495, 438);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(104, 28);
+			this.btnDelete.TabIndex = 19;
+			this.btnDelete.Text = "Delete";
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+			// 
+			// btnSave
+			// 
+			this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSave.BorderRadius = 3;
+			this.btnSave.BorderThickness = 1;
+			this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnSave.Enabled = false;
+			this.btnSave.FillColor = System.Drawing.Color.CornflowerBlue;
+			this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnSave.ForeColor = System.Drawing.Color.White;
+			this.btnSave.Location = new System.Drawing.Point(441, 487);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(104, 28);
+			this.btnSave.TabIndex = 20;
+			this.btnSave.Text = "Save";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCancel.BorderRadius = 3;
+			this.btnCancel.BorderThickness = 1;
+			this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnCancel.Enabled = false;
+			this.btnCancel.FillColor = System.Drawing.Color.OrangeRed;
+			this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnCancel.ForeColor = System.Drawing.Color.White;
+			this.btnCancel.Location = new System.Drawing.Point(551, 487);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(104, 28);
+			this.btnCancel.TabIndex = 21;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+			// 
+			// txtUsername
+			// 
+			this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.passwordTextBox.Location = new System.Drawing.Point(191, 478);
-			this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6);
-			this.passwordTextBox.Name = "passwordTextBox";
-			this.passwordTextBox.Size = new System.Drawing.Size(221, 25);
-			this.passwordTextBox.TabIndex = 10;
-			this.passwordTextBox.UseSystemPasswordChar = true;
+			this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Username", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtUsername.Enabled = false;
+			this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtUsername.Location = new System.Drawing.Point(191, 367);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(6);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(221, 25);
+			this.txtUsername.TabIndex = 14;
 			// 
-			// noTelpTextBox
+			// txtPassword
 			// 
-			this.noTelpTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.noTelpTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NoTelp", true));
-			this.noTelpTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.noTelpTextBox.Location = new System.Drawing.Point(191, 441);
-			this.noTelpTextBox.Margin = new System.Windows.Forms.Padding(6);
-			this.noTelpTextBox.Name = "noTelpTextBox";
-			this.noTelpTextBox.Size = new System.Drawing.Size(221, 25);
-			this.noTelpTextBox.TabIndex = 8;
+			this.txtPassword.Enabled = false;
+			this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPassword.Location = new System.Drawing.Point(191, 478);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.Size = new System.Drawing.Size(221, 25);
+			this.txtPassword.TabIndex = 10;
+			this.txtPassword.UseSystemPasswordChar = true;
 			// 
-			// namaLengkapTextBox
+			// txtNoTelp
 			// 
-			this.namaLengkapTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtNoTelp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.namaLengkapTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NamaLengkap", true));
-			this.namaLengkapTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.namaLengkapTextBox.Location = new System.Drawing.Point(191, 404);
-			this.namaLengkapTextBox.Margin = new System.Windows.Forms.Padding(6);
-			this.namaLengkapTextBox.Name = "namaLengkapTextBox";
-			this.namaLengkapTextBox.Size = new System.Drawing.Size(221, 25);
-			this.namaLengkapTextBox.TabIndex = 6;
+			this.txtNoTelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NoTelp", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtNoTelp.Enabled = false;
+			this.txtNoTelp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNoTelp.Location = new System.Drawing.Point(191, 441);
+			this.txtNoTelp.Margin = new System.Windows.Forms.Padding(6);
+			this.txtNoTelp.Name = "txtNoTelp";
+			this.txtNoTelp.Size = new System.Drawing.Size(221, 25);
+			this.txtNoTelp.TabIndex = 8;
 			// 
-			// emailTextBox
+			// txtNamaLengkap
 			// 
-			this.emailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtNamaLengkap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Email", true));
-			this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.emailTextBox.Location = new System.Drawing.Point(191, 330);
-			this.emailTextBox.Margin = new System.Windows.Forms.Padding(6);
-			this.emailTextBox.Name = "emailTextBox";
-			this.emailTextBox.Size = new System.Drawing.Size(221, 25);
-			this.emailTextBox.TabIndex = 2;
+			this.txtNamaLengkap.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NamaLengkap", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtNamaLengkap.Enabled = false;
+			this.txtNamaLengkap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNamaLengkap.Location = new System.Drawing.Point(191, 404);
+			this.txtNamaLengkap.Margin = new System.Windows.Forms.Padding(6);
+			this.txtNamaLengkap.Name = "txtNamaLengkap";
+			this.txtNamaLengkap.Size = new System.Drawing.Size(221, 25);
+			this.txtNamaLengkap.TabIndex = 6;
 			// 
-			// textBox1
+			// txtEmail
 			// 
-			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(191, 515);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(6);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(221, 25);
-			this.textBox1.TabIndex = 16;
-			this.textBox1.UseSystemPasswordChar = true;
+			this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtEmail.Enabled = false;
+			this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtEmail.Location = new System.Drawing.Point(191, 330);
+			this.txtEmail.Margin = new System.Windows.Forms.Padding(6);
+			this.txtEmail.Name = "txtEmail";
+			this.txtEmail.Size = new System.Drawing.Size(221, 25);
+			this.txtEmail.TabIndex = 2;
+			// 
+			// txtConfirmPassword
+			// 
+			this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtConfirmPassword.Enabled = false;
+			this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtConfirmPassword.Location = new System.Drawing.Point(191, 515);
+			this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(6);
+			this.txtConfirmPassword.Name = "txtConfirmPassword";
+			this.txtConfirmPassword.Size = new System.Drawing.Size(221, 25);
+			this.txtConfirmPassword.TabIndex = 16;
+			this.txtConfirmPassword.UseSystemPasswordChar = true;
+			// 
+			// GuruBindingSource
+			// 
+			this.GuruBindingSource.AllowNew = true;
+			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
+			this.GuruBindingSource.Filter = "";
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaLengkap";
+			this.dataGridViewTextBoxColumn2.HeaderText = "NamaLengkap";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "Username";
+			this.dataGridViewTextBoxColumn3.HeaderText = "Username";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this.dataGridViewTextBoxColumn5.DataPropertyName = "NoTelp";
+			this.dataGridViewTextBoxColumn5.HeaderText = "NoTelp";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
+			this.dataGridViewTextBoxColumn6.HeaderText = "Email";
+			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.ReadOnly = true;
 			// 
 			// UCGuru
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.Controls.Add(this.guna2Button5);
-			this.Controls.Add(this.guna2Button4);
-			this.Controls.Add(this.guna2Button3);
-			this.Controls.Add(this.guna2Button2);
-			this.Controls.Add(this.guna2Button1);
+			this.Controls.Add(this.btnCancel);
+			this.Controls.Add(this.btnSave);
+			this.Controls.Add(this.btnDelete);
+			this.Controls.Add(this.btnUpdate);
+			this.Controls.Add(this.btnInsert);
 			this.Controls.Add(label1);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtConfirmPassword);
 			this.Controls.Add(emailLabel);
-			this.Controls.Add(this.emailTextBox);
+			this.Controls.Add(this.txtEmail);
 			this.Controls.Add(namaLengkapLabel);
-			this.Controls.Add(this.namaLengkapTextBox);
+			this.Controls.Add(this.txtNamaLengkap);
 			this.Controls.Add(noTelpLabel);
-			this.Controls.Add(this.noTelpTextBox);
+			this.Controls.Add(this.txtNoTelp);
 			this.Controls.Add(passwordLabel);
-			this.Controls.Add(this.passwordTextBox);
+			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(usernameLabel);
-			this.Controls.Add(this.usernameTextBox);
-			this.Controls.Add(this.userDataGridView);
+			this.Controls.Add(this.txtUsername);
+			this.Controls.Add(this.dgvGuru);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "UCGuru";
 			this.Size = new System.Drawing.Size(675, 579);
 			this.Load += new System.EventHandler(this.UCGuru_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -396,22 +411,22 @@
 
 		#endregion
 		private System.Windows.Forms.BindingSource GuruBindingSource;
-		private System.Windows.Forms.DataGridView userDataGridView;
+		private System.Windows.Forms.DataGridView dgvGuru;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-		private Guna.UI2.WinForms.Guna2Button guna2Button1;
-		private Guna.UI2.WinForms.Guna2Button guna2Button2;
-		private Guna.UI2.WinForms.Guna2Button guna2Button3;
-		private Guna.UI2.WinForms.Guna2Button guna2Button4;
-		private Guna.UI2.WinForms.Guna2Button guna2Button5;
-		private System.Windows.Forms.TextBox usernameTextBox;
-		private System.Windows.Forms.TextBox passwordTextBox;
-		private System.Windows.Forms.TextBox noTelpTextBox;
-		private System.Windows.Forms.TextBox namaLengkapTextBox;
-		private System.Windows.Forms.TextBox emailTextBox;
-		private System.Windows.Forms.TextBox textBox1;
+		private Guna.UI2.WinForms.Guna2Button btnUpdate;
+		private Guna.UI2.WinForms.Guna2Button btnDelete;
+		private Guna.UI2.WinForms.Guna2Button btnSave;
+		private Guna.UI2.WinForms.Guna2Button btnCancel;
+		private System.Windows.Forms.TextBox txtUsername;
+		private System.Windows.Forms.TextBox txtPassword;
+		private System.Windows.Forms.TextBox txtNoTelp;
+		private System.Windows.Forms.TextBox txtNamaLengkap;
+		private System.Windows.Forms.TextBox txtEmail;
+		private System.Windows.Forms.TextBox txtConfirmPassword;
+		private Guna.UI2.WinForms.Guna2Button btnInsert;
 	}
 }

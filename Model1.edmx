@@ -60,8 +60,8 @@
           <Property Name="NamaLengkap" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="NoTelp" Type="int" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="NoTelp" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Role" Type="varchar" MaxLength="15" Nullable="false" />
         </EntityType>
         <Association Name="FK_Kelas_KategoriID">
@@ -238,8 +238,8 @@
           <Property Name="NamaLengkap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="NoTelp" Type="Int32" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NoTelp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Role" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Scores" Relationship="Self.FK_Score_UserID" FromRole="User" ToRole="Score" />
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_UserID" FromRole="User" ToRole="Transaksi" />

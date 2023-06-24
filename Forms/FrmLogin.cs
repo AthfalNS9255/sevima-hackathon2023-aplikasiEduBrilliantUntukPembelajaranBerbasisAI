@@ -15,9 +15,7 @@ namespace EduBrilliant
 {
    public partial class FrmLogin : Form
    {
-      public static SqlConnection cn;
-      SqlCommand cmd;
-      SqlDataReader dr;
+		EduBrilliantEntities db = new EduBrilliantEntities();
 
       public FrmLogin()
       {
@@ -26,9 +24,6 @@ namespace EduBrilliant
 
       private void FrmLogin_Load(object sender, EventArgs e)
       {
-			cn = new SqlConnection(@"Data Source=DESKTOP-6I160VI\SQLEXPRESS;Initial Catalog=GrandHotel;integrated security=true;");
-			cn.Open();
-
 			Height = 446;
       }
 
@@ -41,7 +36,7 @@ namespace EduBrilliant
          txtNamaLengkapReg.Text = "";
          txtPasswordReg.Text = "";
          txtConfirmPasswordReg.Text = "";
-         txtNoTelpReg.Text = "";
+         txtEmailReg.Text = "";
       }
 
       private void btnNavRegister_Click(object sender, EventArgs e)
@@ -49,7 +44,7 @@ namespace EduBrilliant
          ClearFields();
          pnlLogin.Visible = false;
          pnlRegister.Visible = true;
-         Height = 564;
+         Height = 581;
          CenterToScreen();
       }
 
@@ -86,54 +81,29 @@ namespace EduBrilliant
 
             string HashPasword = sb.ToString();
 
-            cmd = new SqlCommand($"SELECT * FROM tb_masyarakat WHERE username = '{Username}' AND password = '{HashPasword}'", cn);
-            dr = cmd.ExecuteReader();
-            if (!dr.Read())
+				User user = db.Users.Where(x => x.Username == Username && x.Password == HashPasword).FirstOrDefault();
+            if (user == null)
             {
-               dr.Close();
-
-               cmd = new SqlCommand($"SELECT * FROM tb_petugas WHERE username = '{Username}' AND password = '{HashPasword}'", cn);
-               dr = cmd.ExecuteReader();
-               if (dr.Read())
-               {
-                  Hide();
-                  //FrmMainAdmin frmMainAdmin = new FrmMainAdmin();
-
-                  //DataLogin.UserID = dr.GetInt32(0);
-
-                  //if (dr.GetInt32(4) == 1)
-                  //{
-                  //   frmMainAdmin.btnPetugas.Visible = true;
-                  //   frmMainAdmin.btnNewLelang.Enabled = false;
-                  //   frmMainAdmin.Show();
-                  //}
-                  //else if (dr.GetInt32(4) == 2)
-                  //{
-                  //   frmMainAdmin.btnPetugas.Visible = false;
-                  //   frmMainAdmin.btnNewLelang.Enabled = true;
-                  //   frmMainAdmin.Show();
-                  //}
-               }
-               else
-               {
-                  MessageBox.Show("Username dan/atau Password salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               }
-
-               dr.Close();
-            }
-            else
-            {
-               Hide();
-
-               //FrmMainMasyarakat frmMainMasyarakat = new FrmMainMasyarakat();
-
-               //DataLogin.UserID = dr.GetInt32(0);
-
-               //frmMainMasyarakat.Show();
+					MessageBox.Show("Username dan/atau Password salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
             }
 
-            dr.Close();
-         }
+				if (user.Role == "Admin")
+				{
+					FrmMainAdmin frm = new FrmMainAdmin();
+					frm.Show();
+				}
+				else if (user.Role == "Guru")
+				{
+
+				}
+				else if (user.Role == "User")
+				{
+
+				}
+
+				Hide();
+			}
          else
          {
             MessageBox.Show("Semua field wajib diisi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -143,7 +113,7 @@ namespace EduBrilliant
       private void btnRegister_Click(object sender, EventArgs e)
       {
          if (txtUsernameReg.Text.IsNotNullOrEmpty() && txtNamaLengkapReg.Text.IsNotNullOrEmpty() && txtPasswordReg.Text.IsNotNullOrEmpty() && 
-            txtConfirmPasswordReg.Text.IsNotNullOrEmpty() && txtNoTelpReg.Text.IsNotNullOrEmpty())
+            txtConfirmPasswordReg.Text.IsNotNullOrEmpty() && txtEmailReg.Text.IsNotNullOrEmpty() && txtNoTelpReg.Text.IsNotNullOrEmpty())
          {
             if (txtPasswordReg.Text.Length < 8)
             {
@@ -157,17 +127,19 @@ namespace EduBrilliant
                return;
             }
 
-            if (!txtNoTelpReg.Text.StartsWith("+62") && !txtNoTelpReg.Text.StartsWith("08") || txtNoTelpReg.Text.Length < 10 || txtNoTelpReg.Text.Length > 13)
+            if ((!txtNoTelpReg.Text.StartsWith("+62") && !txtNoTelpReg.Text.StartsWith("08")) || txtNoTelpReg.Text.Length < 10 || txtNoTelpReg.Text.Length > 14)
             {
                MessageBox.Show("Format nomor telepon salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                return;
             }
 
-            string Username = txtUsernameReg.Text.Trim();
-            string NamaLengkap = txtNamaLengkapReg.Text.Trim();
+				if (!txtEmailReg.Text.IsValidEmail())
+				{
+					MessageBox.Show("Format Email salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
             string Password = txtPasswordReg.Text.Trim();
-            string ConfirmPassword = txtConfirmPasswordReg.Text.Trim();
-            string NoTelp = txtNoTelpReg.Text.Trim();
 
             SHA256 sha = SHA256.Create();
             byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(Password));
@@ -181,14 +153,16 @@ namespace EduBrilliant
 
             string HashPassword = sb.ToString();
 
-            cmd = new SqlCommand($"registrasiMasyarakat", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nama", NamaLengkap);
-            cmd.Parameters.AddWithValue("@Username", Username);
-            cmd.Parameters.AddWithValue("@Password", HashPassword);
-            cmd.Parameters.AddWithValue("@NoTelp", NoTelp);
+				User user = new User();
+				user.Username = txtUsernameReg.Text.Trim();
+				user.NamaLengkap = txtNamaLengkapReg.Text.Trim();
+				user.Password = HashPassword;
+				user.Role = "User";
+				user.Email = txtEmailReg.Text.Trim();
+				user.NoTelp = txtNoTelpReg.Text.Trim();
 
-            if (cmd.ExecuteNonQuery() == 1)
+				db.Users.Add(user);
+            if (db.SaveChanges() == 1)
             {
                DialogResult dialogResult =  MessageBox.Show("Anda berhasil Registrasi!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                if (dialogResult == DialogResult.OK)
@@ -222,7 +196,7 @@ namespace EduBrilliant
       }
    }
 
-   public class DataLogin
+   public class Session
    {
       public static int UserID { get; set; }
    }

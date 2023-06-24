@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.IO;
 using System.Data.SqlClient;
+using Guna.UI2.WinForms;
+using EduBrilliant.UserControls;
 
 namespace EduBrilliant
 {
@@ -27,6 +29,29 @@ namespace EduBrilliant
          InitializeComponent();
       }
 
-      
+		private void DefaultState()
+		{
+			btnDashboard.Checked = false;
+			btnGuru.Checked = false;
+			btnSiswa.Checked = false;
+			btnKategori.Checked = false;
+		}
+
+		private void Navigation(UserControl uc, Guna2Button btn)
+		{
+			DefaultState();
+			btn.Checked = true;
+
+			PnlContainer.Controls.Clear();
+			uc.Dock = DockStyle.Fill;
+			PnlContainer.Controls.Add(uc);
+			uc.BringToFront();
+		}
+
+		private void btnGuru_Click(object sender, EventArgs e)
+		{
+			UCGuru uc = new UCGuru();
+			Navigation(uc, (Guna2Button)sender);
+		}
 	}
 }

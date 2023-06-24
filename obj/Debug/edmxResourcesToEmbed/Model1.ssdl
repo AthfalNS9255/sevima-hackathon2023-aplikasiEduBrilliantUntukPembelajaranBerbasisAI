@@ -55,8 +55,8 @@
     <Property Name="NamaLengkap" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Username" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="NoTelp" Type="int" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="NoTelp" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Role" Type="varchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <Association Name="FK_Kelas_KategoriID">
