@@ -194,9 +194,14 @@ namespace EduBrilliant
             txtLoginPassword.IconRight = Resources.icons8_hide_24;
          }
       }
-   }
 
-   public class Session
+		private void ControlBoxClose_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+	}
+
+	public class Session
    {
       public static int UserID { get; set; }
    }

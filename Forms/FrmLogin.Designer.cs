@@ -76,6 +76,7 @@ namespace EduBrilliant
 			// 
 			this.ControlBoxClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.ControlBoxClose.BackColor = System.Drawing.Color.Transparent;
+			this.ControlBoxClose.CustomClick = true;
 			this.ControlBoxClose.FillColor = System.Drawing.Color.Transparent;
 			this.ControlBoxClose.HoverState.FillColor = System.Drawing.Color.Red;
 			this.ControlBoxClose.HoverState.IconColor = System.Drawing.Color.White;
@@ -85,6 +86,7 @@ namespace EduBrilliant
 			this.ControlBoxClose.Size = new System.Drawing.Size(45, 29);
 			this.ControlBoxClose.TabIndex = 1;
 			this.ControlBoxClose.UseTransparentBackground = true;
+			this.ControlBoxClose.Click += new System.EventHandler(this.ControlBoxClose_Click);
 			// 
 			// pnlLogin
 			// 
