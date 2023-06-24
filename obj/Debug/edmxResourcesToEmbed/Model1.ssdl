@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EduBrilliantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nama" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kelas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriID" Type="int" Nullable="false" />
+    <Property Name="Nama" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Harga" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Score">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="SoalID" Type="int" Nullable="false" />
+    <Property Name="Score" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Soal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KelasID" Type="int" Nullable="false" />
+    <Property Name="Waktu" Type="int" Nullable="false" />
+    <Property Name="Deadline" Type="datetime" Nullable="false" />
+    <Property Name="MaxScore" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transaksi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="KelasID" Type="int" Nullable="false" />
+    <Property Name="DateActivated" Type="datetime" />
+    <Property Name="Token" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="IsActive" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaLengkap" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NoTelp" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Role" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Kelas_KategoriID">
+    <End Role="Kategori" Type="Self.Kategori" Multiplicity="1" />
+    <End Role="Kelas" Type="Self.Kelas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategori">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kelas">
+        <PropertyRef Name="KategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Score_SoalID">
+    <End Role="Soal" Type="Self.Soal" Multiplicity="1" />
+    <End Role="Score" Type="Self.Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Soal">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Score">
+        <PropertyRef Name="SoalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Score_UserID">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Score" Type="Self.Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Score">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Soal_KelasID">
+    <End Role="Kelas" Type="Self.Kelas" Multiplicity="1" />
+    <End Role="Soal" Type="Self.Soal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kelas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Soal">
+        <PropertyRef Name="KelasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaksi_KelasID">
+    <End Role="Kelas" Type="Self.Kelas" Multiplicity="1" />
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kelas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Transaksi">
+        <PropertyRef Name="KelasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaksi_UserID">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Transaksi">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EduBrilliantModelStoreContainer">
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kelas" EntityType="Self.Kelas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Score" EntityType="Self.Score" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Soal" EntityType="Self.Soal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaksi" EntityType="Self.Transaksi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Kelas_KategoriID" Association="Self.FK_Kelas_KategoriID">
+      <End Role="Kategori" EntitySet="Kategori" />
+      <End Role="Kelas" EntitySet="Kelas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Score_SoalID" Association="Self.FK_Score_SoalID">
+      <End Role="Soal" EntitySet="Soal" />
+      <End Role="Score" EntitySet="Score" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Score_UserID" Association="Self.FK_Score_UserID">
+      <End Role="User" EntitySet="User" />
+      <End Role="Score" EntitySet="Score" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Soal_KelasID" Association="Self.FK_Soal_KelasID">
+      <End Role="Kelas" EntitySet="Kelas" />
+      <End Role="Soal" EntitySet="Soal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaksi_KelasID" Association="Self.FK_Transaksi_KelasID">
+      <End Role="Kelas" EntitySet="Kelas" />
+      <End Role="Transaksi" EntitySet="Transaksi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaksi_UserID" Association="Self.FK_Transaksi_UserID">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transaksi" EntitySet="Transaksi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
