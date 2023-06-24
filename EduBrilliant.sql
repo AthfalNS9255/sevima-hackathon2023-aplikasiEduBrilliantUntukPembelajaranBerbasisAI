@@ -16,8 +16,18 @@ create table Kategori (
 create Table Kelas (
 	ID int not null primary key identity,
 	Nama varchar(100) not null,
+	Harga int not null
+)
+
+create Table Transaksi (
+	ID int not null primary key identity,
 	UserID int not null,
-	constraint FK_Kelas_UserID foreign key (UserID) references [User](ID)
+	KelasID int not null,
+	DateActivated datetime null,
+	Token varchar(6) not null,
+	IsActive int not null,
+	constraint FK_Transaksi_UserID foreign key (UserID) references [User](ID),
+	constraint FK_Transaksi_KelasID foreign key (KelasID) references Kelas(ID)
 )
 
 create table Soal (
@@ -27,7 +37,7 @@ create table Soal (
 	Waktu int not null,
 	Deadline datetime not null,
 	MaxScore int not null,
-	constraint FK_Kelas_KategoriID foreign key (KategoriID) references Kategori(ID)
+	constraint FK_Soal_KategoriID foreign key (KategoriID) references Kategori(ID)
 )
 
 create table Score (
@@ -38,5 +48,3 @@ create table Score (
 	constraint FK_Score_UserID foreign key (UserID) references [User](ID),
 	constraint FK_Score_SoalID foreign key (SoalID) references Soal(ID)
 )
-
-	
