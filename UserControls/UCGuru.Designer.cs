@@ -37,6 +37,12 @@
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvGuru = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
 			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -48,13 +54,7 @@
 			this.txtNamaLengkap = new System.Windows.Forms.TextBox();
 			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label2 = new System.Windows.Forms.Label();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			emailLabel = new System.Windows.Forms.Label();
 			namaLengkapLabel = new System.Windows.Forms.Label();
 			noTelpLabel = new System.Windows.Forms.Label();
@@ -139,7 +139,8 @@
 			this.dgvGuru.AllowUserToResizeRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.dgvGuru.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvGuru.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.dgvGuru.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dgvGuru.AutoGenerateColumns = false;
 			this.dgvGuru.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -159,6 +160,47 @@
 			this.dgvGuru.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvGuru.Size = new System.Drawing.Size(669, 280);
 			this.dgvGuru.TabIndex = 0;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaLengkap";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Nama Lengkap";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "Username";
+			this.dataGridViewTextBoxColumn3.HeaderText = "Username";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this.dataGridViewTextBoxColumn5.DataPropertyName = "NoTelp";
+			this.dataGridViewTextBoxColumn5.HeaderText = "NoTelp";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
+			this.dataGridViewTextBoxColumn6.HeaderText = "Email";
+			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.ReadOnly = true;
+			// 
+			// GuruBindingSource
+			// 
+			this.GuruBindingSource.AllowNew = true;
+			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
+			this.GuruBindingSource.Filter = "";
 			// 
 			// btnInsert
 			// 
@@ -335,12 +377,6 @@
 			this.txtConfirmPassword.TabIndex = 16;
 			this.txtConfirmPassword.UseSystemPasswordChar = true;
 			// 
-			// GuruBindingSource
-			// 
-			this.GuruBindingSource.AllowNew = true;
-			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
-			this.GuruBindingSource.Filter = "";
-			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
@@ -350,41 +386,6 @@
 			this.label2.Size = new System.Drawing.Size(55, 28);
 			this.label2.TabIndex = 23;
 			this.label2.Text = "Guru";
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaLengkap";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Nama Lengkap";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "Username";
-			this.dataGridViewTextBoxColumn3.HeaderText = "Username";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this.dataGridViewTextBoxColumn5.DataPropertyName = "NoTelp";
-			this.dataGridViewTextBoxColumn5.HeaderText = "NoTelp";
-			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-			this.dataGridViewTextBoxColumn5.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
-			this.dataGridViewTextBoxColumn6.HeaderText = "Email";
-			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-			this.dataGridViewTextBoxColumn6.ReadOnly = true;
 			// 
 			// UCGuru
 			// 

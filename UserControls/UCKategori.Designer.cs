@@ -32,9 +32,7 @@
 			System.Windows.Forms.Label nameLabel;
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvKategori = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.KategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
 			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -42,6 +40,8 @@
 			this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtNama = new System.Windows.Forms.TextBox();
+			this.KategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			nameLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKategori)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.KategoriBindingSource)).BeginInit();
@@ -49,7 +49,7 @@
 			// 
 			// nameLabel
 			// 
-			nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			nameLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			nameLabel.AutoSize = true;
 			nameLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			nameLabel.Location = new System.Drawing.Point(147, 378);
@@ -66,7 +66,8 @@
 			this.dgvKategori.AllowUserToResizeRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.dgvKategori.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvKategori.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.dgvKategori.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dgvKategori.AutoGenerateColumns = false;
 			this.dgvKategori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -84,14 +85,6 @@
 			this.dgvKategori.Size = new System.Drawing.Size(669, 280);
 			this.dgvKategori.TabIndex = 0;
 			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 43;
-			// 
 			// Column1
 			// 
 			this.Column1.DataPropertyName = "Nama";
@@ -100,15 +93,9 @@
 			this.Column1.ReadOnly = true;
 			this.Column1.Width = 61;
 			// 
-			// KategoriBindingSource
-			// 
-			this.KategoriBindingSource.AllowNew = true;
-			this.KategoriBindingSource.DataSource = typeof(EduBrilliant.Kategori);
-			this.KategoriBindingSource.Filter = "";
-			// 
 			// btnInsert
 			// 
-			this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnInsert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnInsert.BorderRadius = 3;
 			this.btnInsert.BorderThickness = 1;
 			this.btnInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -127,7 +114,7 @@
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnUpdate.BorderRadius = 3;
 			this.btnUpdate.BorderThickness = 1;
 			this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -146,7 +133,7 @@
 			// 
 			// btnDelete
 			// 
-			this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnDelete.BorderRadius = 3;
 			this.btnDelete.BorderThickness = 1;
 			this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -165,7 +152,7 @@
 			// 
 			// btnSave
 			// 
-			this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnSave.BorderRadius = 3;
 			this.btnSave.BorderThickness = 1;
 			this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -185,7 +172,7 @@
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnCancel.BorderRadius = 3;
 			this.btnCancel.BorderThickness = 1;
 			this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -215,8 +202,7 @@
 			// 
 			// txtNama
 			// 
-			this.txtNama.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtNama.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.txtNama.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KategoriBindingSource, "Nama", true, System.Windows.Forms.DataSourceUpdateMode.Never));
 			this.txtNama.Enabled = false;
 			this.txtNama.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,6 +211,20 @@
 			this.txtNama.Name = "txtNama";
 			this.txtNama.Size = new System.Drawing.Size(221, 25);
 			this.txtNama.TabIndex = 14;
+			// 
+			// KategoriBindingSource
+			// 
+			this.KategoriBindingSource.AllowNew = true;
+			this.KategoriBindingSource.DataSource = typeof(EduBrilliant.Kategori);
+			this.KategoriBindingSource.Filter = "";
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 43;
 			// 
 			// UCKategori
 			// 
