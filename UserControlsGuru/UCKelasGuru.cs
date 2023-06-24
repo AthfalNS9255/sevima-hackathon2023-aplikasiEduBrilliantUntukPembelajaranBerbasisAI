@@ -22,6 +22,33 @@ namespace EduBrilliant.UserControlsGuru
 		private void UCKelasGuru_Load(object sender, EventArgs e)
 		{
 			cbKategoriBindingSource.DataSource = db.Kategoris.ToList();
+			FlowLayoutLoad();
+		}
+
+		private void FlowLayoutLoad()
+		{
+			int Step = 0;
+			try
+			{
+				flowPanelKelas.Controls.Clear();
+
+				List<Kela> lstKelas = db.Kelas.ToList();
+
+				foreach (var item in lstKelas)
+				{
+					flowPanelKelas.Controls.Add(new UCKelasItems
+					{
+						ID = item.ID,
+						Nama = item.Nama,
+						Harga = "Rp. " + item.Harga.ToString("N2"),
+						Kategori = item.Kategori.Nama
+					});
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"Error Step {Step} = {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void btnTambah_Click(object sender, EventArgs e)

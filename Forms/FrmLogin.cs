@@ -95,7 +95,8 @@ namespace EduBrilliant
 				}
 				else if (user.Role == "Guru")
 				{
-
+					FrmMainGuru frm = new FrmMainGuru();
+					frm.Show();
 				}
 				else if (user.Role == "Siswa")
 				{

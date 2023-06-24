@@ -307,6 +307,7 @@ namespace EduBrilliant
 			this.Name = "FrmMainAdmin";
 			this.ShowIcon = false;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.FrmMainAdmin_Load);
 			this.guna2Panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
 			this.ResumeLayout(false);
@@ -326,10 +327,10 @@ namespace EduBrilliant
       private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
       private System.Windows.Forms.ToolTip toolTip1;
       private Guna.UI2.WinForms.Guna2Button btnLogOut;
-		private Guna.UI2.WinForms.Guna2ShadowPanel PnlContainer;
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
 		public Guna.UI2.WinForms.Guna2Button btnKategori;
 		public Guna.UI2.WinForms.Guna2Button btnSiswa;
 		public Guna.UI2.WinForms.Guna2Button btnGuru;
+		public Guna.UI2.WinForms.Guna2ShadowPanel PnlContainer;
 	}
 }

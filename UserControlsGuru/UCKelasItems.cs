@@ -40,5 +40,10 @@ namespace EduBrilliant.UserControlsGuru
 			get { return lblID.Text.GetAfter("ID : ").Trim().ToInt32(); }
 			set { lblID.Text = $"ID : {value}"; }
 		}
+
+		private void btnDetail_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

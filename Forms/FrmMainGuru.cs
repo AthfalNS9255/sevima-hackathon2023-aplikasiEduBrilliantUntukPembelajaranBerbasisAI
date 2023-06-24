@@ -12,6 +12,7 @@ using System.IO;
 using System.Data.SqlClient;
 using Guna.UI2.WinForms;
 using EduBrilliant.UserControls;
+using EduBrilliant.UserControlsGuru;
 
 namespace EduBrilliant
 {
@@ -34,7 +35,6 @@ namespace EduBrilliant
 			btnDashboard.Checked = false;
 			btnKelas.Checked = false;
 			btnTransaksi.Checked = false;
-			btnKategori.Checked = false;
 		}
 
 		public void Navigation(UserControl uc, Guna2Button btn)
@@ -48,28 +48,22 @@ namespace EduBrilliant
 			uc.BringToFront();
 		}
 
-		private void btnGuru_Click(object sender, EventArgs e)
+		private void btnKelas_Click(object sender, EventArgs e)
 		{
-			UCGuru uc = new UCGuru();
+			UCKelasGuru uc = new UCKelasGuru();
 			Navigation(uc, (Guna2Button)sender);
 		}
 
 		private void btnDashboard_Click(object sender, EventArgs e)
 		{
-			UCDashboardAdmin uc = new UCDashboardAdmin();
-			Navigation(uc, (Guna2Button)sender);
+			//UCDashboardAdmin uc = new UCDashboardAdmin();
+			//Navigation(uc, (Guna2Button)sender);
 		}
 
-		private void btnSiswa_Click(object sender, EventArgs e)
+		private void btnTransaksi_Click(object sender, EventArgs e)
 		{
-			UCSiswa uc = new UCSiswa();
-			Navigation(uc, (Guna2Button)sender);
-		}
-
-		private void btnKategori_Click(object sender, EventArgs e)
-		{
-			UCKategori uc = new UCKategori();
-			Navigation(uc, (Guna2Button)sender);
+			//UCSiswa uc = new UCSiswa();
+			//Navigation(uc, (Guna2Button)sender);
 		}
 
 		private void btnLogOut_Click(object sender, EventArgs e)

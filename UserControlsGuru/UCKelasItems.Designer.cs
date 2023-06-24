@@ -74,6 +74,7 @@
 			this.btnDetail.Size = new System.Drawing.Size(102, 32);
 			this.btnDetail.TabIndex = 11;
 			this.btnDetail.Text = "Detail";
+			this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
 			// 
 			// lblJumlahSiswa
 			// 

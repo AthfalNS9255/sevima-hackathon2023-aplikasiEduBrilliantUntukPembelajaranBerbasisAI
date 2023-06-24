@@ -195,7 +195,7 @@ namespace EduBrilliant
 			this.btnTransaksi.Text = "Transaksi";
 			this.btnTransaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
 			this.btnTransaksi.TextOffset = new System.Drawing.Point(6, 0);
-			this.btnTransaksi.Click += new System.EventHandler(this.btnSiswa_Click);
+			this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
 			// 
 			// btnKelas
 			// 
@@ -221,7 +221,7 @@ namespace EduBrilliant
 			this.btnKelas.Text = "Kelas";
 			this.btnKelas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
 			this.btnKelas.TextOffset = new System.Drawing.Point(6, 0);
-			this.btnKelas.Click += new System.EventHandler(this.btnGuru_Click);
+			this.btnKelas.Click += new System.EventHandler(this.btnKelas_Click);
 			// 
 			// btnDashboard
 			// 

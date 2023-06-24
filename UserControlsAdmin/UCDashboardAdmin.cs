@@ -40,25 +40,25 @@ namespace EduBrilliant.UserControls
 			}
 		}
 
-		private void guna2ShadowPanel1_Click(object sender, EventArgs e)
-		{
-			FrmMainAdmin frm = new FrmMainAdmin();
-			UCGuru uc =  new UCGuru();
-			frm.Navigation(uc, frm.btnGuru);
-		}
+		//private void guna2ShadowPanel1_Click(object sender, EventArgs e)
+		//{
+		//	FrmMainAdmin frm = new FrmMainAdmin();
+		//	UCGuru uc =  new UCGuru();
+		//	frm.Navigation(uc, frm.btnGuru);
+		//}
 
-		private void guna2ShadowPanel2_Click(object sender, EventArgs e)
-		{
-			FrmMainAdmin frm = new FrmMainAdmin();
-			UCSiswa uc = new UCSiswa();
-			frm.Navigation(uc, frm.btnSiswa);
-		}
+		//private void guna2ShadowPanel2_Click(object sender, EventArgs e)
+		//{
+		//	FrmMainAdmin frm = new FrmMainAdmin();
+		//	UCSiswa uc = new UCSiswa();
+		//	frm.Navigation(uc, frm.btnSiswa);
+		//}
 
-		private void guna2ShadowPanel3_Click(object sender, EventArgs e)
-		{
-			FrmMainAdmin frm = new FrmMainAdmin();
-			UCKategori uc = new UCKategori();
-			frm.Navigation(uc, frm.btnKategori);
-		}
+		//private void guna2ShadowPanel3_Click(object sender, EventArgs e)
+		//{
+		//	FrmMainAdmin frm = new FrmMainAdmin();
+		//	UCKategori uc = new UCKategori();
+		//	frm.Navigation(uc, frm.btnKategori);
+		//}
 	}
 }

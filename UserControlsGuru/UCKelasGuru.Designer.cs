@@ -34,19 +34,20 @@
 			this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
 			this.numHarga = new Guna.UI2.WinForms.Guna2NumericUpDown();
 			this.cbKategori = new Guna.UI2.WinForms.Guna2ComboBox();
+			this.cbKategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.cbKategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.numHarga)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbKategoriBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// flowPanelKelas
 			// 
+			this.flowPanelKelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.flowPanelKelas.AutoScroll = true;
-			this.flowPanelKelas.Dock = System.Windows.Forms.DockStyle.Left;
 			this.flowPanelKelas.Location = new System.Drawing.Point(0, 0);
 			this.flowPanelKelas.Name = "flowPanelKelas";
 			this.flowPanelKelas.Padding = new System.Windows.Forms.Padding(10);
@@ -55,8 +56,7 @@
 			// 
 			// btnTambah
 			// 
-			this.btnTambah.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnTambah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnTambah.BorderRadius = 3;
 			this.btnTambah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
 			this.btnTambah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -74,8 +74,7 @@
 			// 
 			// txtNama
 			// 
-			this.txtNama.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtNama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtNama.BorderColor = System.Drawing.Color.Black;
 			this.txtNama.BorderRadius = 3;
 			this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -98,8 +97,7 @@
 			// 
 			// numHarga
 			// 
-			this.numHarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.numHarga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.numHarga.BackColor = System.Drawing.Color.Transparent;
 			this.numHarga.BorderColor = System.Drawing.Color.Black;
 			this.numHarga.BorderRadius = 3;
@@ -125,8 +123,7 @@
 			// 
 			// cbKategori
 			// 
-			this.cbKategori.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.cbKategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.cbKategori.BackColor = System.Drawing.Color.Transparent;
 			this.cbKategori.BorderColor = System.Drawing.Color.Black;
 			this.cbKategori.BorderRadius = 3;
@@ -145,8 +142,13 @@
 			this.cbKategori.TabIndex = 4;
 			this.cbKategori.ValueMember = "ID";
 			// 
+			// cbKategoriBindingSource
+			// 
+			this.cbKategoriBindingSource.DataSource = typeof(EduBrilliant.Kategori);
+			// 
 			// label6
 			// 
+			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(482, 79);
 			this.label6.Name = "label6";
@@ -156,6 +158,7 @@
 			// 
 			// label7
 			// 
+			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label7.AutoSize = true;
 			this.label7.Location = new System.Drawing.Point(481, 143);
 			this.label7.Name = "label7";
@@ -165,6 +168,7 @@
 			// 
 			// label8
 			// 
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label8.AutoSize = true;
 			this.label8.Location = new System.Drawing.Point(482, 205);
 			this.label8.Name = "label8";
@@ -174,7 +178,7 @@
 			// 
 			// label9
 			// 
-			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.Location = new System.Drawing.Point(534, 14);
@@ -182,10 +186,6 @@
 			this.label9.Size = new System.Drawing.Size(79, 37);
 			this.label9.TabIndex = 8;
 			this.label9.Text = "Kelas";
-			// 
-			// cbKategoriBindingSource
-			// 
-			this.cbKategoriBindingSource.DataSource = typeof(EduBrilliant.Kategori);
 			// 
 			// UCKelasGuru
 			// 
