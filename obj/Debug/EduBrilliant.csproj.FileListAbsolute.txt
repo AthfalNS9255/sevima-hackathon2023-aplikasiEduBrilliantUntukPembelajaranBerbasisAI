@@ -26,3 +26,6 @@ D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCDashboardAdmin.re
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.FrmMainGuru.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasGuru.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasItems.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasDetail.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCTransaksi.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCSoalItems.resources

@@ -43,8 +43,8 @@ namespace EduBrilliant.UserControlsGuru
 
 		private void btnDetail_Click(object sender, EventArgs e)
 		{
-			FrmMainGuru frm = new FrmMainGuru();
-			frm.PnlContainer.Controls.Add();
+			//FrmMainGuru frm = new FrmMainGuru();
+			//frm.PnlContainer.Controls.Add();
 		}
 	}
 }

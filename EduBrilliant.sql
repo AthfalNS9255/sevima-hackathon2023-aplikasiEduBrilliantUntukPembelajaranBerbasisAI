@@ -4,7 +4,7 @@ create table [User] (
 	Username varchar(100) not null,
 	Password varchar(100) not null,
 	NoTelp varchar(15) not null,
-	Email varchar(100) null,
+	Email varchar(100) not null,
 	Role varchar(15) not null,
 )
 
@@ -34,11 +34,12 @@ create Table Transaksi (
 
 create table Soal (
 	ID int Not null primary key identity,
-	Nama varchar(50) not null,
+	Nama text not null,
 	KelasID int not null,
 	Waktu int not null,
-	Deadline datetime not null,
-	MaxScore int not null,
+	Nomor int not null,
+	Jawaban varchar(3) not null,
+	Score int not null,
 	constraint FK_Soal_KelasID foreign key (KelasID) references Kelas(ID)
 )
 

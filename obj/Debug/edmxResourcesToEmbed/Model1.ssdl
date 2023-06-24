@@ -30,11 +30,12 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nama" Type="text" Nullable="false" />
     <Property Name="KelasID" Type="int" Nullable="false" />
     <Property Name="Waktu" Type="int" Nullable="false" />
-    <Property Name="Deadline" Type="datetime" Nullable="false" />
-    <Property Name="MaxScore" Type="int" Nullable="false" />
+    <Property Name="Nomor" Type="int" Nullable="false" />
+    <Property Name="Jawaban" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Transaksi">
     <Key>

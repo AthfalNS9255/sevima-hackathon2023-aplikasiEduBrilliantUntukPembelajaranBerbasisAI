@@ -36,11 +36,12 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="KelasID" Type="Int32" Nullable="false" />
     <Property Name="Waktu" Type="Int32" Nullable="false" />
-    <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="MaxScore" Type="Int32" Nullable="false" />
+    <Property Name="Nomor" Type="Int32" Nullable="false" />
+    <Property Name="Jawaban" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Kela" Relationship="Self.FK_Soal_KelasID" FromRole="Soal" ToRole="Kelas" />
     <NavigationProperty Name="Scores" Relationship="Self.FK_Score_SoalID" FromRole="Soal" ToRole="Score" />
   </EntityType>

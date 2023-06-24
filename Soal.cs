@@ -24,8 +24,9 @@ namespace EduBrilliant
         public string Nama { get; set; }
         public int KelasID { get; set; }
         public int Waktu { get; set; }
-        public System.DateTime Deadline { get; set; }
-        public int MaxScore { get; set; }
+        public int Nomor { get; set; }
+        public string Jawaban { get; set; }
+        public int Score { get; set; }
     
         public virtual Kela Kela { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

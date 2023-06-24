@@ -36,8 +36,9 @@
           <ScalarProperty Name="Nama" ColumnName="Nama" />
           <ScalarProperty Name="KelasID" ColumnName="KelasID" />
           <ScalarProperty Name="Waktu" ColumnName="Waktu" />
-          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
-          <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
+          <ScalarProperty Name="Nomor" ColumnName="Nomor" />
+          <ScalarProperty Name="Jawaban" ColumnName="Jawaban" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
