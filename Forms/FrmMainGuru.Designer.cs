@@ -31,8 +31,13 @@ namespace EduBrilliant
       {
 			this.components = new System.ComponentModel.Container();
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+			this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
+			this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
+			this.btnKelas = new Guna.UI2.WinForms.Guna2Button();
+			this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
 			this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
 			this.label1 = new System.Windows.Forms.Label();
+			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
 			this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -40,11 +45,6 @@ namespace EduBrilliant
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.PnlContainer = new Guna.UI2.WinForms.Guna2ShadowPanel();
-			this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-			this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
-			this.btnKelas = new Guna.UI2.WinForms.Guna2Button();
-			this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.guna2Panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -64,87 +64,6 @@ namespace EduBrilliant
 			this.guna2Panel1.Name = "guna2Panel1";
 			this.guna2Panel1.Size = new System.Drawing.Size(237, 644);
 			this.guna2Panel1.TabIndex = 0;
-			// 
-			// guna2Separator1
-			// 
-			this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-			this.guna2Separator1.Location = new System.Drawing.Point(12, 53);
-			this.guna2Separator1.Name = "guna2Separator1";
-			this.guna2Separator1.Size = new System.Drawing.Size(212, 10);
-			this.guna2Separator1.TabIndex = 3;
-			// 
-			// label1
-			// 
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(57, 3);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(177, 55);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "EduBrilliant";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// guna2BorderlessForm1
-			// 
-			this.guna2BorderlessForm1.ContainerControl = this;
-			this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-			this.guna2BorderlessForm1.ResizeForm = false;
-			this.guna2BorderlessForm1.TransparentWhileDrag = true;
-			// 
-			// guna2DragControl1
-			// 
-			this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-			this.guna2DragControl1.UseTransparentDrag = true;
-			// 
-			// guna2ControlBox1
-			// 
-			this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2ControlBox1.CustomClick = true;
-			this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
-			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox1.Location = new System.Drawing.Point(882, 3);
-			this.guna2ControlBox1.Name = "guna2ControlBox1";
-			this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-			this.guna2ControlBox1.TabIndex = 1;
-			this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
-			// 
-			// guna2ControlBox2
-			// 
-			this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-			this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-			this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-			this.guna2ControlBox2.Location = new System.Drawing.Point(780, 3);
-			this.guna2ControlBox2.Name = "guna2ControlBox2";
-			this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
-			this.guna2ControlBox2.TabIndex = 3;
-			// 
-			// guna2ControlBox3
-			// 
-			this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-			this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-			this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-			this.guna2ControlBox3.Location = new System.Drawing.Point(831, 3);
-			this.guna2ControlBox3.Name = "guna2ControlBox3";
-			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
-			this.guna2ControlBox3.TabIndex = 4;
-			// 
-			// PnlContainer
-			// 
-			this.PnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.PnlContainer.BackColor = System.Drawing.Color.Transparent;
-			this.PnlContainer.FillColor = System.Drawing.Color.White;
-			this.PnlContainer.Location = new System.Drawing.Point(243, 53);
-			this.PnlContainer.Name = "PnlContainer";
-			this.PnlContainer.Radius = 6;
-			this.PnlContainer.ShadowColor = System.Drawing.Color.Black;
-			this.PnlContainer.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-			this.PnlContainer.Size = new System.Drawing.Size(675, 579);
-			this.PnlContainer.TabIndex = 5;
 			// 
 			// btnLogOut
 			// 
@@ -249,6 +168,26 @@ namespace EduBrilliant
 			this.btnDashboard.TextOffset = new System.Drawing.Point(6, 0);
 			this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
 			// 
+			// guna2Separator1
+			// 
+			this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+			this.guna2Separator1.Location = new System.Drawing.Point(12, 53);
+			this.guna2Separator1.Name = "guna2Separator1";
+			this.guna2Separator1.Size = new System.Drawing.Size(212, 10);
+			this.guna2Separator1.TabIndex = 3;
+			// 
+			// label1
+			// 
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(57, 3);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(177, 55);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "EduBrilliant";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// guna2PictureBox1
 			// 
 			this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -261,6 +200,67 @@ namespace EduBrilliant
 			this.guna2PictureBox1.TabIndex = 1;
 			this.guna2PictureBox1.TabStop = false;
 			this.guna2PictureBox1.UseTransparentBackground = true;
+			// 
+			// guna2BorderlessForm1
+			// 
+			this.guna2BorderlessForm1.ContainerControl = this;
+			this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+			this.guna2BorderlessForm1.ResizeForm = false;
+			this.guna2BorderlessForm1.TransparentWhileDrag = true;
+			// 
+			// guna2DragControl1
+			// 
+			this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+			this.guna2DragControl1.UseTransparentDrag = true;
+			// 
+			// guna2ControlBox1
+			// 
+			this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.guna2ControlBox1.CustomClick = true;
+			this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
+			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+			this.guna2ControlBox1.Location = new System.Drawing.Point(882, 3);
+			this.guna2ControlBox1.Name = "guna2ControlBox1";
+			this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+			this.guna2ControlBox1.TabIndex = 1;
+			this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+			// 
+			// guna2ControlBox2
+			// 
+			this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+			this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+			this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+			this.guna2ControlBox2.Location = new System.Drawing.Point(780, 3);
+			this.guna2ControlBox2.Name = "guna2ControlBox2";
+			this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+			this.guna2ControlBox2.TabIndex = 3;
+			// 
+			// guna2ControlBox3
+			// 
+			this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+			this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+			this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
+			this.guna2ControlBox3.Location = new System.Drawing.Point(831, 3);
+			this.guna2ControlBox3.Name = "guna2ControlBox3";
+			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+			this.guna2ControlBox3.TabIndex = 4;
+			// 
+			// PnlContainer
+			// 
+			this.PnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.PnlContainer.BackColor = System.Drawing.Color.Transparent;
+			this.PnlContainer.FillColor = System.Drawing.Color.White;
+			this.PnlContainer.Location = new System.Drawing.Point(243, 53);
+			this.PnlContainer.Name = "PnlContainer";
+			this.PnlContainer.Radius = 6;
+			this.PnlContainer.ShadowColor = System.Drawing.Color.Black;
+			this.PnlContainer.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+			this.PnlContainer.Size = new System.Drawing.Size(675, 579);
+			this.PnlContainer.TabIndex = 5;
 			// 
 			// FrmMainGuru
 			// 
@@ -298,9 +298,9 @@ namespace EduBrilliant
       private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
       private System.Windows.Forms.ToolTip toolTip1;
       private Guna.UI2.WinForms.Guna2Button btnLogOut;
-		private Guna.UI2.WinForms.Guna2ShadowPanel PnlContainer;
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
 		public Guna.UI2.WinForms.Guna2Button btnTransaksi;
 		public Guna.UI2.WinForms.Guna2Button btnKelas;
+		public Guna.UI2.WinForms.Guna2ShadowPanel PnlContainer;
 	}
 }
