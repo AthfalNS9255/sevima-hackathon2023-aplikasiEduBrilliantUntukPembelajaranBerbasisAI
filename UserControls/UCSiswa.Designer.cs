@@ -1,6 +1,6 @@
 ﻿namespace EduBrilliant.UserControls
 {
-	partial class UCGuru
+	partial class UCSiswa
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -37,6 +37,7 @@
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvGuru = new System.Windows.Forms.DataGridView();
+			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
 			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +49,7 @@
 			this.txtNamaLengkap = new System.Windows.Forms.TextBox();
 			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.SiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +64,7 @@
 			label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.SiswaBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// emailLabel
@@ -151,7 +153,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-			this.dgvGuru.DataSource = this.GuruBindingSource;
+			this.dgvGuru.DataSource = this.SiswaBindingSource;
 			this.dgvGuru.Location = new System.Drawing.Point(3, 37);
 			this.dgvGuru.Name = "dgvGuru";
 			this.dgvGuru.ReadOnly = true;
@@ -159,6 +161,12 @@
 			this.dgvGuru.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvGuru.Size = new System.Drawing.Size(669, 280);
 			this.dgvGuru.TabIndex = 0;
+			// 
+			// GuruBindingSource
+			// 
+			this.GuruBindingSource.AllowNew = true;
+			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
+			this.GuruBindingSource.Filter = "";
 			// 
 			// btnInsert
 			// 
@@ -335,11 +343,11 @@
 			this.txtConfirmPassword.TabIndex = 16;
 			this.txtConfirmPassword.UseSystemPasswordChar = true;
 			// 
-			// GuruBindingSource
+			// SiswaBindingSource
 			// 
-			this.GuruBindingSource.AllowNew = true;
-			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
-			this.GuruBindingSource.Filter = "";
+			this.SiswaBindingSource.AllowNew = true;
+			this.SiswaBindingSource.DataSource = typeof(EduBrilliant.User);
+			this.SiswaBindingSource.Filter = "";
 			// 
 			// label2
 			// 
@@ -347,9 +355,9 @@
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.Location = new System.Drawing.Point(4, 4);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(55, 28);
-			this.label2.TabIndex = 23;
-			this.label2.Text = "Guru";
+			this.label2.Size = new System.Drawing.Size(60, 28);
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Siswa";
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
@@ -386,7 +394,7 @@
 			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
 			this.dataGridViewTextBoxColumn6.ReadOnly = true;
 			// 
-			// UCGuru
+			// UCSiswa
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -411,11 +419,12 @@
 			this.Controls.Add(this.txtUsername);
 			this.Controls.Add(this.dgvGuru);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Name = "UCGuru";
+			this.Name = "UCSiswa";
 			this.Size = new System.Drawing.Size(675, 579);
 			this.Load += new System.EventHandler(this.UCGuru_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.SiswaBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -435,6 +444,7 @@
 		private System.Windows.Forms.TextBox txtEmail;
 		private System.Windows.Forms.TextBox txtConfirmPassword;
 		private Guna.UI2.WinForms.Guna2Button btnInsert;
+		private System.Windows.Forms.BindingSource SiswaBindingSource;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

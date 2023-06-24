@@ -97,7 +97,7 @@ namespace EduBrilliant
 				{
 
 				}
-				else if (user.Role == "User")
+				else if (user.Role == "Siswa")
 				{
 
 				}

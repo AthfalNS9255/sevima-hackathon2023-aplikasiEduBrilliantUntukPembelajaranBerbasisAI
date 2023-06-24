@@ -111,6 +111,12 @@
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCSiswa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSiswa.Designer.cs">
+      <DependentUpon>UCSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCGuru.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCSiswa.resx">
+      <DependentUpon>UCSiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCGuru.resx">
       <DependentUpon>UCGuru.cs</DependentUpon>
     </EmbeddedResource>
