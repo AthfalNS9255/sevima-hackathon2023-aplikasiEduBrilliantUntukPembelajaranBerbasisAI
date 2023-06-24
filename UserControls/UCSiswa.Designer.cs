@@ -36,8 +36,7 @@
 			System.Windows.Forms.Label usernameLabel;
 			System.Windows.Forms.Label label1;
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.dgvGuru = new System.Windows.Forms.DataGridView();
-			this.GuruBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dgvSiswa = new System.Windows.Forms.DataGridView();
 			this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
 			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -49,8 +48,8 @@
 			this.txtNamaLengkap = new System.Windows.Forms.TextBox();
 			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-			this.SiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label2 = new System.Windows.Forms.Label();
+			this.SiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +61,7 @@
 			passwordLabel = new System.Windows.Forms.Label();
 			usernameLabel = new System.Windows.Forms.Label();
 			label1 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvSiswa)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.SiswaBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -133,40 +131,34 @@
 			label1.TabIndex = 15;
 			label1.Text = "Confirm Password:";
 			// 
-			// dgvGuru
+			// dgvSiswa
 			// 
-			this.dgvGuru.AllowUserToAddRows = false;
-			this.dgvGuru.AllowUserToDeleteRows = false;
-			this.dgvGuru.AllowUserToOrderColumns = true;
-			this.dgvGuru.AllowUserToResizeRows = false;
+			this.dgvSiswa.AllowUserToAddRows = false;
+			this.dgvSiswa.AllowUserToDeleteRows = false;
+			this.dgvSiswa.AllowUserToOrderColumns = true;
+			this.dgvSiswa.AllowUserToResizeRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.dgvGuru.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvGuru.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.dgvSiswa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvSiswa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dgvGuru.AutoGenerateColumns = false;
-			this.dgvGuru.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvGuru.BackgroundColor = System.Drawing.Color.White;
-			this.dgvGuru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvGuru.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.dgvSiswa.AutoGenerateColumns = false;
+			this.dgvSiswa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvSiswa.BackgroundColor = System.Drawing.Color.White;
+			this.dgvSiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvSiswa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-			this.dgvGuru.DataSource = this.SiswaBindingSource;
-			this.dgvGuru.Location = new System.Drawing.Point(3, 37);
-			this.dgvGuru.Name = "dgvGuru";
-			this.dgvGuru.ReadOnly = true;
-			this.dgvGuru.RowHeadersVisible = false;
-			this.dgvGuru.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvGuru.Size = new System.Drawing.Size(669, 280);
-			this.dgvGuru.TabIndex = 0;
-			// 
-			// GuruBindingSource
-			// 
-			this.GuruBindingSource.AllowNew = true;
-			this.GuruBindingSource.DataSource = typeof(EduBrilliant.User);
-			this.GuruBindingSource.Filter = "";
+			this.dgvSiswa.DataSource = this.SiswaBindingSource;
+			this.dgvSiswa.Location = new System.Drawing.Point(3, 37);
+			this.dgvSiswa.Name = "dgvSiswa";
+			this.dgvSiswa.ReadOnly = true;
+			this.dgvSiswa.RowHeadersVisible = false;
+			this.dgvSiswa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvSiswa.Size = new System.Drawing.Size(669, 280);
+			this.dgvSiswa.TabIndex = 0;
 			// 
 			// btnInsert
 			// 
@@ -269,7 +261,7 @@
 			// 
 			this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Username", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SiswaBindingSource, "Username", true, System.Windows.Forms.DataSourceUpdateMode.Never));
 			this.txtUsername.Enabled = false;
 			this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsername.Location = new System.Drawing.Point(191, 382);
@@ -295,7 +287,7 @@
 			// 
 			this.txtNoTelp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtNoTelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NoTelp", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtNoTelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SiswaBindingSource, "NoTelp", true, System.Windows.Forms.DataSourceUpdateMode.Never));
 			this.txtNoTelp.Enabled = false;
 			this.txtNoTelp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNoTelp.Location = new System.Drawing.Point(191, 456);
@@ -308,7 +300,7 @@
 			// 
 			this.txtNamaLengkap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtNamaLengkap.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "NamaLengkap", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtNamaLengkap.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SiswaBindingSource, "NamaLengkap", true, System.Windows.Forms.DataSourceUpdateMode.Never));
 			this.txtNamaLengkap.Enabled = false;
 			this.txtNamaLengkap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNamaLengkap.Location = new System.Drawing.Point(191, 419);
@@ -321,7 +313,7 @@
 			// 
 			this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GuruBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+			this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SiswaBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
 			this.txtEmail.Enabled = false;
 			this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtEmail.Location = new System.Drawing.Point(191, 345);
@@ -343,12 +335,6 @@
 			this.txtConfirmPassword.TabIndex = 16;
 			this.txtConfirmPassword.UseSystemPasswordChar = true;
 			// 
-			// SiswaBindingSource
-			// 
-			this.SiswaBindingSource.AllowNew = true;
-			this.SiswaBindingSource.DataSource = typeof(EduBrilliant.User);
-			this.SiswaBindingSource.Filter = "";
-			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
@@ -358,6 +344,12 @@
 			this.label2.Size = new System.Drawing.Size(60, 28);
 			this.label2.TabIndex = 22;
 			this.label2.Text = "Siswa";
+			// 
+			// SiswaBindingSource
+			// 
+			this.SiswaBindingSource.AllowNew = true;
+			this.SiswaBindingSource.DataSource = typeof(EduBrilliant.User);
+			this.SiswaBindingSource.Filter = "";
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
@@ -417,13 +409,12 @@
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(usernameLabel);
 			this.Controls.Add(this.txtUsername);
-			this.Controls.Add(this.dgvGuru);
+			this.Controls.Add(this.dgvSiswa);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "UCSiswa";
 			this.Size = new System.Drawing.Size(675, 579);
-			this.Load += new System.EventHandler(this.UCGuru_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dgvGuru)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.GuruBindingSource)).EndInit();
+			this.Load += new System.EventHandler(this.UCSiswa_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgvSiswa)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.SiswaBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -431,8 +422,7 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.BindingSource GuruBindingSource;
-		private System.Windows.Forms.DataGridView dgvGuru;
+		private System.Windows.Forms.DataGridView dgvSiswa;
 		private Guna.UI2.WinForms.Guna2Button btnUpdate;
 		private Guna.UI2.WinForms.Guna2Button btnDelete;
 		private Guna.UI2.WinForms.Guna2Button btnSave;

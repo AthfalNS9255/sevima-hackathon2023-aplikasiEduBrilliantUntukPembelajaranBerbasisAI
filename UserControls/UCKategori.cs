@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace EduBrilliant.UserControls
 {
-	public partial class UCSiswa : UserControl
+	public partial class UCKategori : UserControl
 	{
 		EduBrilliantEntities db = new EduBrilliantEntities();
 
 		string formstate = "";
-		public UCSiswa()
+		public UCKategori()
 		{
 			InitializeComponent();
 		}
 
-		private void UCSiswa_Load(object sender, EventArgs e)
+		private void UCKategori_Load(object sender, EventArgs e)
 		{
-			SiswaBindingSource.DataSource = db.Users.Where(x => x.Role == "Siswa").ToList();
+			KategoriBindingSource.DataSource = db.Kategoris.ToList();
 		}
 
 		private void btnInsert_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace EduBrilliant.UserControls
 			btnSave.Enabled = true;
 			btnCancel.Enabled = true;
 
-			dgvSiswa.ClearSelection();
+			dgvKategori.ClearSelection();
 			foreach (var item in Controls.OfType<TextBox>().ToList())
 			{
 				item.ResetText();
@@ -67,7 +67,7 @@ namespace EduBrilliant.UserControls
 			int Step = 0;
 			try
 			{
-				if (txtEmail.Text.IsNullOrEmpty() || txtNamaLengkap.Text.IsNullOrEmpty() || txtNoTelp.Text.IsNullOrEmpty() || txtPassword.Text.IsNullOrEmpty() || txtConfirmPassword.Text.IsNullOrEmpty())
+				if (txtNama.Text.IsNullOrEmpty())
 				{
 					MessageBox.Show($"Isi semua field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
@@ -76,11 +76,11 @@ namespace EduBrilliant.UserControls
 				DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 				if (dialogResult == DialogResult.OK)
 				{
-					int rowindex = dgvSiswa.CurrentRow.Index;
-					int ID = dgvSiswa.Rows[rowindex].Cells[0].Value.ToInt32();
+					int rowindex = dgvKategori.CurrentRow.Index;
+					int ID = dgvKategori.Rows[rowindex].Cells[0].Value.ToInt32();
 
-					User user = db.Users.Where(x => x.ID == ID).First();
-					db.Users.Remove(user);
+					Kategori kategori = db.Kategoris.Where(x => x.ID == ID).First();
+					db.Kategoris.Remove(kategori);
 					db.SaveChanges();
 				}
 
@@ -96,71 +96,30 @@ namespace EduBrilliant.UserControls
 			int Step = 0;
 			try
 			{
-				if (txtEmail.Text.IsNullOrEmpty() || txtNamaLengkap.Text.IsNullOrEmpty() || txtNoTelp.Text.IsNullOrEmpty() || txtPassword.Text.IsNullOrEmpty() || txtConfirmPassword.Text.IsNullOrEmpty())
+				if (txtNama.Text.IsNullOrEmpty())
 				{
 					MessageBox.Show($"Isi semua field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 
-				if (!txtEmail.Text.IsValidEmail())
-				{
-					MessageBox.Show("Format Email salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
-
-				if (txtPassword.Text != txtConfirmPassword.Text)
-				{
-					MessageBox.Show("Password harus sama dengan Confirm Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
-
-				if ((!txtNoTelp.Text.StartsWith("+62") && !txtNoTelp.Text.StartsWith("08")) || txtNoTelp.Text.Length < 10 || txtNoTelp.Text.Length > 14)
-				{
-					MessageBox.Show("Format nomor telepon salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
-
-				string Password = txtPassword.Text.Trim();
-
-				SHA256 sha = SHA256.Create();
-				byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(Password));
-
-				StringBuilder sb = new StringBuilder();
-
-				for (int i = 0; i < bytes.Length; i++)
-				{
-					sb.Append(bytes[i].ToString("x2"));
-				}
-
-				string HashPassword = sb.ToString();
-
 				if (formstate == "Insert")
 				{
-					User user = new User();
-					user.Email = txtEmail.Text.Trim();
-					user.NamaLengkap = txtNamaLengkap.Text.Trim();
-					user.Username = txtUsername.Text.Trim();
-					user.NoTelp = txtNoTelp.Text.Trim();
-					user.Password = HashPassword;
-					user.Role = "Siswa";
+					Kategori kategori = new Kategori();
+					kategori.Nama = txtNama.Text.Trim();
 
-					db.Users.Add(user);
+					db.Kategoris.Add(kategori);
 					db.SaveChanges();
 
 				}
 				else if (formstate == "Update")
 				{
-					int rowindex = dgvSiswa.CurrentRow.Index;
-					int ID = dgvSiswa.Rows[rowindex].Cells[0].Value.ToInt32();
+					int rowindex = dgvKategori.CurrentRow.Index;
+					int ID = dgvKategori.Rows[rowindex].Cells[0].Value.ToInt32();
 
-					User user = db.Users.Where(x => x.ID == ID).First();
-					user.Email = txtEmail.Text.Trim();
-					user.NamaLengkap = txtNamaLengkap.Text.Trim();
-					user.Username = txtUsername.Text.Trim();
-					user.NoTelp = txtNoTelp.Text.Trim();
-					user.Password = HashPassword;
-					user.Role = "Siswa";
-					db.Entry(user).State = System.Data.Entity.EntityState.Modified;
+					Kategori kategori = db.Kategoris.Where(x => x.ID == ID).First();
+					kategori.Nama = txtNama.Text.Trim();
+
+					db.Entry(kategori).State = System.Data.Entity.EntityState.Modified;
 					db.SaveChanges();
 				}
 
@@ -177,7 +136,7 @@ namespace EduBrilliant.UserControls
 					item.Enabled = true;
 				}
 
-				SiswaBindingSource.DataSource = db.Users.Where(x => x.Role == "Siswa").ToList();
+				KategoriBindingSource.DataSource = db.Kategoris.ToList();
 			}
 			catch (Exception ex)
 			{

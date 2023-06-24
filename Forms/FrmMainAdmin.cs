@@ -53,5 +53,23 @@ namespace EduBrilliant
 			UCGuru uc = new UCGuru();
 			Navigation(uc, (Guna2Button)sender);
 		}
+
+		private void btnDashboard_Click(object sender, EventArgs e)
+		{
+			UCDashboardAdmin uc = new UCDashboardAdmin();
+			Navigation(uc, (Guna2Button)sender);
+		}
+
+		private void btnSiswa_Click(object sender, EventArgs e)
+		{
+			UCSiswa uc = new UCSiswa();
+			Navigation(uc, (Guna2Button)sender);
+		}
+
+		private void btnKategori_Click(object sender, EventArgs e)
+		{
+			UCKategori uc = new UCKategori();
+			Navigation(uc, (Guna2Button)sender);
+		}
 	}
 }

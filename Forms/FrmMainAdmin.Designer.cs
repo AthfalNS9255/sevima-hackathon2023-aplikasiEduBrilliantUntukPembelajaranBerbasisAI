@@ -31,14 +31,8 @@ namespace EduBrilliant
       {
 			this.components = new System.ComponentModel.Container();
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-			this.btnKategori = new Guna.UI2.WinForms.Guna2Button();
-			this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-			this.btnSiswa = new Guna.UI2.WinForms.Guna2Button();
-			this.btnGuru = new Guna.UI2.WinForms.Guna2Button();
-			this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
 			this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
 			this.label1 = new System.Windows.Forms.Label();
-			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
 			this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -46,6 +40,12 @@ namespace EduBrilliant
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.PnlContainer = new Guna.UI2.WinForms.Guna2ShadowPanel();
+			this.btnKategori = new Guna.UI2.WinForms.Guna2Button();
+			this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
+			this.btnSiswa = new Guna.UI2.WinForms.Guna2Button();
+			this.btnGuru = new Guna.UI2.WinForms.Guna2Button();
+			this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.guna2Panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -67,131 +67,6 @@ namespace EduBrilliant
 			this.guna2Panel1.Size = new System.Drawing.Size(237, 644);
 			this.guna2Panel1.TabIndex = 0;
 			// 
-			// btnKategori
-			// 
-			this.btnKategori.BackColor = System.Drawing.Color.Transparent;
-			this.btnKategori.BorderRadius = 15;
-			this.btnKategori.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnKategori.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnKategori.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnKategori.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnKategori.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnKategori.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnKategori.FillColor = System.Drawing.Color.Transparent;
-			this.btnKategori.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnKategori.ForeColor = System.Drawing.Color.White;
-			this.btnKategori.Image = global::EduBrilliant.Properties.Resources.icons8_tag_96;
-			this.btnKategori.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnKategori.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnKategori.Location = new System.Drawing.Point(6, 236);
-			this.btnKategori.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.btnKategori.Name = "btnKategori";
-			this.btnKategori.Size = new System.Drawing.Size(228, 45);
-			this.btnKategori.TabIndex = 8;
-			this.btnKategori.Text = "Kategori";
-			this.btnKategori.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnKategori.TextOffset = new System.Drawing.Point(6, 0);
-			// 
-			// btnLogOut
-			// 
-			this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
-			this.btnLogOut.BorderRadius = 15;
-			this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnLogOut.FillColor = System.Drawing.Color.Transparent;
-			this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnLogOut.ForeColor = System.Drawing.Color.White;
-			this.btnLogOut.Image = global::EduBrilliant.Properties.Resources.icons8_logout_rounded_30;
-			this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnLogOut.Location = new System.Drawing.Point(6, 587);
-			this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.btnLogOut.Name = "btnLogOut";
-			this.btnLogOut.Size = new System.Drawing.Size(228, 45);
-			this.btnLogOut.TabIndex = 7;
-			this.btnLogOut.Text = "Log Out";
-			this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnLogOut.TextOffset = new System.Drawing.Point(6, 0);
-			// 
-			// btnSiswa
-			// 
-			this.btnSiswa.BackColor = System.Drawing.Color.Transparent;
-			this.btnSiswa.BorderRadius = 15;
-			this.btnSiswa.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnSiswa.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnSiswa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnSiswa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnSiswa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnSiswa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnSiswa.FillColor = System.Drawing.Color.Transparent;
-			this.btnSiswa.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnSiswa.ForeColor = System.Drawing.Color.White;
-			this.btnSiswa.Image = global::EduBrilliant.Properties.Resources.icons8_student_96;
-			this.btnSiswa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnSiswa.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnSiswa.Location = new System.Drawing.Point(6, 181);
-			this.btnSiswa.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.btnSiswa.Name = "btnSiswa";
-			this.btnSiswa.Size = new System.Drawing.Size(228, 45);
-			this.btnSiswa.TabIndex = 6;
-			this.btnSiswa.Text = "Siswa";
-			this.btnSiswa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnSiswa.TextOffset = new System.Drawing.Point(6, 0);
-			// 
-			// btnGuru
-			// 
-			this.btnGuru.BackColor = System.Drawing.Color.Transparent;
-			this.btnGuru.BorderRadius = 15;
-			this.btnGuru.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnGuru.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnGuru.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnGuru.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnGuru.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnGuru.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnGuru.FillColor = System.Drawing.Color.Transparent;
-			this.btnGuru.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnGuru.ForeColor = System.Drawing.Color.White;
-			this.btnGuru.Image = global::EduBrilliant.Properties.Resources.icons8_teacher_96__1_;
-			this.btnGuru.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnGuru.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnGuru.Location = new System.Drawing.Point(6, 126);
-			this.btnGuru.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.btnGuru.Name = "btnGuru";
-			this.btnGuru.Size = new System.Drawing.Size(228, 45);
-			this.btnGuru.TabIndex = 5;
-			this.btnGuru.Text = "Guru";
-			this.btnGuru.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnGuru.TextOffset = new System.Drawing.Point(6, 0);
-			this.btnGuru.Click += new System.EventHandler(this.btnGuru_Click);
-			// 
-			// btnDashboard
-			// 
-			this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
-			this.btnDashboard.BorderRadius = 15;
-			this.btnDashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnDashboard.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
-			this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F);
-			this.btnDashboard.ForeColor = System.Drawing.Color.White;
-			this.btnDashboard.Image = global::EduBrilliant.Properties.Resources.icons8_home_page_48;
-			this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnDashboard.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnDashboard.Location = new System.Drawing.Point(6, 71);
-			this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.btnDashboard.Name = "btnDashboard";
-			this.btnDashboard.Size = new System.Drawing.Size(228, 45);
-			this.btnDashboard.TabIndex = 4;
-			this.btnDashboard.Text = "Dashboard";
-			this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.btnDashboard.TextOffset = new System.Drawing.Point(6, 0);
-			// 
 			// guna2Separator1
 			// 
 			this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
@@ -211,19 +86,6 @@ namespace EduBrilliant
 			this.label1.TabIndex = 2;
 			this.label1.Text = "EduBrilliant";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// guna2PictureBox1
-			// 
-			this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-			this.guna2PictureBox1.Image = global::EduBrilliant.Properties.Resources.icons8_education_96;
-			this.guna2PictureBox1.ImageRotate = 0F;
-			this.guna2PictureBox1.Location = new System.Drawing.Point(6, 3);
-			this.guna2PictureBox1.Name = "guna2PictureBox1";
-			this.guna2PictureBox1.Size = new System.Drawing.Size(50, 55);
-			this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.guna2PictureBox1.TabIndex = 1;
-			this.guna2PictureBox1.TabStop = false;
-			this.guna2PictureBox1.UseTransparentBackground = true;
 			// 
 			// guna2BorderlessForm1
 			// 
@@ -283,6 +145,147 @@ namespace EduBrilliant
 			this.PnlContainer.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
 			this.PnlContainer.Size = new System.Drawing.Size(675, 579);
 			this.PnlContainer.TabIndex = 5;
+			// 
+			// btnKategori
+			// 
+			this.btnKategori.BackColor = System.Drawing.Color.Transparent;
+			this.btnKategori.BorderRadius = 15;
+			this.btnKategori.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnKategori.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnKategori.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnKategori.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnKategori.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnKategori.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnKategori.FillColor = System.Drawing.Color.Transparent;
+			this.btnKategori.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnKategori.ForeColor = System.Drawing.Color.White;
+			this.btnKategori.Image = global::EduBrilliant.Properties.Resources.icons8_tag_96;
+			this.btnKategori.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnKategori.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnKategori.Location = new System.Drawing.Point(6, 236);
+			this.btnKategori.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.btnKategori.Name = "btnKategori";
+			this.btnKategori.Size = new System.Drawing.Size(228, 45);
+			this.btnKategori.TabIndex = 8;
+			this.btnKategori.Text = "Kategori";
+			this.btnKategori.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnKategori.TextOffset = new System.Drawing.Point(6, 0);
+			this.btnKategori.Click += new System.EventHandler(this.btnKategori_Click);
+			// 
+			// btnLogOut
+			// 
+			this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+			this.btnLogOut.BorderRadius = 15;
+			this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnLogOut.FillColor = System.Drawing.Color.Transparent;
+			this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnLogOut.ForeColor = System.Drawing.Color.White;
+			this.btnLogOut.Image = global::EduBrilliant.Properties.Resources.icons8_logout_rounded_30;
+			this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnLogOut.Location = new System.Drawing.Point(6, 587);
+			this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.btnLogOut.Name = "btnLogOut";
+			this.btnLogOut.Size = new System.Drawing.Size(228, 45);
+			this.btnLogOut.TabIndex = 7;
+			this.btnLogOut.Text = "Log Out";
+			this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnLogOut.TextOffset = new System.Drawing.Point(6, 0);
+			// 
+			// btnSiswa
+			// 
+			this.btnSiswa.BackColor = System.Drawing.Color.Transparent;
+			this.btnSiswa.BorderRadius = 15;
+			this.btnSiswa.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnSiswa.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnSiswa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnSiswa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnSiswa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnSiswa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnSiswa.FillColor = System.Drawing.Color.Transparent;
+			this.btnSiswa.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnSiswa.ForeColor = System.Drawing.Color.White;
+			this.btnSiswa.Image = global::EduBrilliant.Properties.Resources.icons8_student_96;
+			this.btnSiswa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnSiswa.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnSiswa.Location = new System.Drawing.Point(6, 181);
+			this.btnSiswa.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.btnSiswa.Name = "btnSiswa";
+			this.btnSiswa.Size = new System.Drawing.Size(228, 45);
+			this.btnSiswa.TabIndex = 6;
+			this.btnSiswa.Text = "Siswa";
+			this.btnSiswa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnSiswa.TextOffset = new System.Drawing.Point(6, 0);
+			this.btnSiswa.Click += new System.EventHandler(this.btnSiswa_Click);
+			// 
+			// btnGuru
+			// 
+			this.btnGuru.BackColor = System.Drawing.Color.Transparent;
+			this.btnGuru.BorderRadius = 15;
+			this.btnGuru.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnGuru.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnGuru.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnGuru.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnGuru.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnGuru.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnGuru.FillColor = System.Drawing.Color.Transparent;
+			this.btnGuru.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnGuru.ForeColor = System.Drawing.Color.White;
+			this.btnGuru.Image = global::EduBrilliant.Properties.Resources.icons8_teacher_96__1_;
+			this.btnGuru.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnGuru.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnGuru.Location = new System.Drawing.Point(6, 126);
+			this.btnGuru.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.btnGuru.Name = "btnGuru";
+			this.btnGuru.Size = new System.Drawing.Size(228, 45);
+			this.btnGuru.TabIndex = 5;
+			this.btnGuru.Text = "Guru";
+			this.btnGuru.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnGuru.TextOffset = new System.Drawing.Point(6, 0);
+			this.btnGuru.Click += new System.EventHandler(this.btnGuru_Click);
+			// 
+			// btnDashboard
+			// 
+			this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
+			this.btnDashboard.BorderRadius = 15;
+			this.btnDashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnDashboard.CheckedState.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
+			this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.btnDashboard.ForeColor = System.Drawing.Color.White;
+			this.btnDashboard.Image = global::EduBrilliant.Properties.Resources.icons8_home_page_48;
+			this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnDashboard.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnDashboard.Location = new System.Drawing.Point(6, 71);
+			this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.btnDashboard.Name = "btnDashboard";
+			this.btnDashboard.Size = new System.Drawing.Size(228, 45);
+			this.btnDashboard.TabIndex = 4;
+			this.btnDashboard.Text = "Dashboard";
+			this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnDashboard.TextOffset = new System.Drawing.Point(6, 0);
+			this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+			// 
+			// guna2PictureBox1
+			// 
+			this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+			this.guna2PictureBox1.Image = global::EduBrilliant.Properties.Resources.icons8_education_96;
+			this.guna2PictureBox1.ImageRotate = 0F;
+			this.guna2PictureBox1.Location = new System.Drawing.Point(6, 3);
+			this.guna2PictureBox1.Name = "guna2PictureBox1";
+			this.guna2PictureBox1.Size = new System.Drawing.Size(50, 55);
+			this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.guna2PictureBox1.TabIndex = 1;
+			this.guna2PictureBox1.TabStop = false;
+			this.guna2PictureBox1.UseTransparentBackground = true;
 			// 
 			// FrmMainAdmin
 			// 
