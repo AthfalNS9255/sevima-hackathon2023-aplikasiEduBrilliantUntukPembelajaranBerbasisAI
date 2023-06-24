@@ -43,8 +43,11 @@ namespace EduBrilliant.UserControlsGuru
 
 		private void btnDetail_Click(object sender, EventArgs e)
 		{
-			//FrmMainGuru frm = new FrmMainGuru();
-			//frm.PnlContainer.Controls.Add();
+			FrmMainGuru frm = new FrmMainGuru();
+			UCKelasDetail uc = new UCKelasDetail();
+			frm.PnlContainer.Controls.Add(uc);
+			uc.Dock = DockStyle.Fill;
+			uc.BringToFront();
 		}
 	}
 }

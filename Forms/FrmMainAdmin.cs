@@ -87,7 +87,7 @@ namespace EduBrilliant
 		private void FrmMainAdmin_Load(object sender, EventArgs e)
 		{
 			UCDashboardAdmin uc = new UCDashboardAdmin();
-			Navigation(uc, (Guna2Button)sender);
+			Navigation(uc, btnDashboard);
 		}
 	}
 }
