@@ -148,6 +148,12 @@
     <Compile Include="UserControlsAdmin\UCGuru.Designer.cs">
       <DependentUpon>UCGuru.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlsGuru\UCDashboardGuru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsGuru\UCDashboardGuru.Designer.cs">
+      <DependentUpon>UCDashboardGuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlsGuru\UCKelasDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsAdmin\UCGuru.resx">
       <DependentUpon>UCGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsGuru\UCDashboardGuru.resx">
+      <DependentUpon>UCDashboardGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsGuru\UCKelasDetail.resx">
       <DependentUpon>UCKelasDetail.cs</DependentUpon>
