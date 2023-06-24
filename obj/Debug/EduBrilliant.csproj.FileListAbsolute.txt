@@ -23,3 +23,6 @@ D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.pdb
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCKategori.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCSiswa.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCDashboardAdmin.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.FrmMainGuru.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasGuru.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasItems.resources

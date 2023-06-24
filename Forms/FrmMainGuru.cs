@@ -15,7 +15,7 @@ using EduBrilliant.UserControls;
 
 namespace EduBrilliant
 {
-   public partial class FrmMainAdmin : Form
+   public partial class FrmMainGuru : Form
    {
       SqlConnection cn;
       SqlCommand cmd;
@@ -24,7 +24,7 @@ namespace EduBrilliant
 
       string formState;
 
-      public FrmMainAdmin()
+      public FrmMainGuru()
       {
          InitializeComponent();
       }
@@ -32,8 +32,8 @@ namespace EduBrilliant
 		private void DefaultState()
 		{
 			btnDashboard.Checked = false;
-			btnGuru.Checked = false;
-			btnSiswa.Checked = false;
+			btnKelas.Checked = false;
+			btnTransaksi.Checked = false;
 			btnKategori.Checked = false;
 		}
 
