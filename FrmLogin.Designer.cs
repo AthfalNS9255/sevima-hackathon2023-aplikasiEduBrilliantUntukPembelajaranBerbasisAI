@@ -1,5 +1,5 @@
 ﻿
-namespace SiLelangOnline
+namespace EduBrilliant
 {
    partial class FrmLogin
    {

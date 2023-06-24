@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using EduBrilliant.Properties;
 
-namespace SiLelangOnline
+namespace EduBrilliant
 {
    public partial class FrmLogin : Form
    {
