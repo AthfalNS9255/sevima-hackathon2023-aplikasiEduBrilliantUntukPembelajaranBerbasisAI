@@ -34,11 +34,9 @@ namespace EduBrilliant
 			this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
 			this.ControlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.pnlLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
-			this.btnNavRegister = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
 			this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
 			this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-			this.txtLoginPassword = new Guna.UI2.WinForms.Guna2TextBox();
 			this.txtLoginUsername = new Guna.UI2.WinForms.Guna2TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pnlRegister = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -47,13 +45,15 @@ namespace EduBrilliant
 			this.txtPasswordReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.txtEmailReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.txtUsernameReg = new Guna.UI2.WinForms.Guna2TextBox();
-			this.btnNavLogin = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
 			this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
 			this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
 			this.txtNamaLengkapReg = new Guna.UI2.WinForms.Guna2TextBox();
 			this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
 			this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+			this.btnNavLogin = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.btnNavRegister = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.txtLoginPassword = new Guna.UI2.WinForms.Guna2TextBox();
 			this.pnlLogin.SuspendLayout();
 			this.guna2Panel1.SuspendLayout();
 			this.pnlRegister.SuspendLayout();
@@ -105,28 +105,6 @@ namespace EduBrilliant
 			this.pnlLogin.Size = new System.Drawing.Size(410, 334);
 			this.pnlLogin.TabIndex = 3;
 			// 
-			// btnNavRegister
-			// 
-			this.btnNavRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnNavRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnNavRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnNavRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnNavRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnNavRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-			this.btnNavRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnNavRegister.ForeColor = System.Drawing.Color.White;
-			this.btnNavRegister.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnNavRegister.Image = global::EduBrilliant.Properties.Resources.icons8_add_user_male_24;
-			this.btnNavRegister.ImageSize = new System.Drawing.Size(23, 23);
-			this.btnNavRegister.Location = new System.Drawing.Point(329, 51);
-			this.btnNavRegister.Margin = new System.Windows.Forms.Padding(0);
-			this.btnNavRegister.Name = "btnNavRegister";
-			this.btnNavRegister.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnNavRegister.Size = new System.Drawing.Size(60, 60);
-			this.btnNavRegister.TabIndex = 5;
-			this.btnNavRegister.UseTransparentBackground = true;
-			this.btnNavRegister.Click += new System.EventHandler(this.btnNavRegister_Click);
-			// 
 			// guna2Panel1
 			// 
 			this.guna2Panel1.BorderRadius = 13;
@@ -175,34 +153,6 @@ namespace EduBrilliant
 			this.btnLogin.TabIndex = 4;
 			this.btnLogin.Text = "Login";
 			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-			// 
-			// txtLoginPassword
-			// 
-			this.txtLoginPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtLoginPassword.BorderRadius = 10;
-			this.txtLoginPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtLoginPassword.DefaultText = "";
-			this.txtLoginPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtLoginPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtLoginPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtLoginPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtLoginPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtLoginPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.txtLoginPassword.ForeColor = System.Drawing.Color.Black;
-			this.txtLoginPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
-			this.txtLoginPassword.IconRight = global::EduBrilliant.Properties.Resources.icons8_hide_24;
-			this.txtLoginPassword.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-			this.txtLoginPassword.IconRightOffset = new System.Drawing.Point(4, 0);
-			this.txtLoginPassword.Location = new System.Drawing.Point(75, 192);
-			this.txtLoginPassword.Name = "txtLoginPassword";
-			this.txtLoginPassword.PasswordChar = '●';
-			this.txtLoginPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-			this.txtLoginPassword.PlaceholderText = "Password";
-			this.txtLoginPassword.SelectedText = "";
-			this.txtLoginPassword.Size = new System.Drawing.Size(268, 36);
-			this.txtLoginPassword.TabIndex = 2;
-			this.txtLoginPassword.UseSystemPasswordChar = true;
-			this.txtLoginPassword.IconRightClick += new System.EventHandler(this.txtLoginPassword_IconRightClick);
 			// 
 			// txtLoginUsername
 			// 
@@ -381,28 +331,6 @@ namespace EduBrilliant
 			this.txtUsernameReg.Size = new System.Drawing.Size(268, 36);
 			this.txtUsernameReg.TabIndex = 0;
 			// 
-			// btnNavLogin
-			// 
-			this.btnNavLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnNavLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnNavLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnNavLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnNavLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnNavLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-			this.btnNavLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnNavLogin.ForeColor = System.Drawing.Color.White;
-			this.btnNavLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
-			this.btnNavLogin.Image = global::EduBrilliant.Properties.Resources.icons8_male_user_24;
-			this.btnNavLogin.ImageSize = new System.Drawing.Size(25, 25);
-			this.btnNavLogin.Location = new System.Drawing.Point(329, 51);
-			this.btnNavLogin.Margin = new System.Windows.Forms.Padding(0);
-			this.btnNavLogin.Name = "btnNavLogin";
-			this.btnNavLogin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnNavLogin.Size = new System.Drawing.Size(60, 60);
-			this.btnNavLogin.TabIndex = 5;
-			this.btnNavLogin.UseTransparentBackground = true;
-			this.btnNavLogin.Click += new System.EventHandler(this.btnNavLogin_Click);
-			// 
 			// guna2Panel2
 			// 
 			this.guna2Panel2.BorderRadius = 13;
@@ -499,6 +427,78 @@ namespace EduBrilliant
 			this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.guna2PictureBox1.TabIndex = 4;
 			this.guna2PictureBox1.TabStop = false;
+			// 
+			// btnNavLogin
+			// 
+			this.btnNavLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNavLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnNavLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnNavLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnNavLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnNavLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+			this.btnNavLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnNavLogin.ForeColor = System.Drawing.Color.White;
+			this.btnNavLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnNavLogin.Image = global::EduBrilliant.Properties.Resources.icons8_male_user_24;
+			this.btnNavLogin.ImageSize = new System.Drawing.Size(25, 25);
+			this.btnNavLogin.Location = new System.Drawing.Point(329, 51);
+			this.btnNavLogin.Margin = new System.Windows.Forms.Padding(0);
+			this.btnNavLogin.Name = "btnNavLogin";
+			this.btnNavLogin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnNavLogin.Size = new System.Drawing.Size(60, 60);
+			this.btnNavLogin.TabIndex = 5;
+			this.btnNavLogin.UseTransparentBackground = true;
+			this.btnNavLogin.Click += new System.EventHandler(this.btnNavLogin_Click);
+			// 
+			// btnNavRegister
+			// 
+			this.btnNavRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNavRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnNavRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnNavRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnNavRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnNavRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+			this.btnNavRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnNavRegister.ForeColor = System.Drawing.Color.White;
+			this.btnNavRegister.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(147)))), ((int)(((byte)(68)))));
+			this.btnNavRegister.Image = global::EduBrilliant.Properties.Resources.icons8_add_user_male_24;
+			this.btnNavRegister.ImageSize = new System.Drawing.Size(23, 23);
+			this.btnNavRegister.Location = new System.Drawing.Point(329, 51);
+			this.btnNavRegister.Margin = new System.Windows.Forms.Padding(0);
+			this.btnNavRegister.Name = "btnNavRegister";
+			this.btnNavRegister.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnNavRegister.Size = new System.Drawing.Size(60, 60);
+			this.btnNavRegister.TabIndex = 5;
+			this.btnNavRegister.UseTransparentBackground = true;
+			this.btnNavRegister.Click += new System.EventHandler(this.btnNavRegister_Click);
+			// 
+			// txtLoginPassword
+			// 
+			this.txtLoginPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtLoginPassword.BorderRadius = 10;
+			this.txtLoginPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtLoginPassword.DefaultText = "";
+			this.txtLoginPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtLoginPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtLoginPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtLoginPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtLoginPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtLoginPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.txtLoginPassword.ForeColor = System.Drawing.Color.Black;
+			this.txtLoginPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(47)))));
+			this.txtLoginPassword.IconRight = global::EduBrilliant.Properties.Resources.icons8_hide_24;
+			this.txtLoginPassword.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+			this.txtLoginPassword.IconRightOffset = new System.Drawing.Point(4, 0);
+			this.txtLoginPassword.Location = new System.Drawing.Point(75, 192);
+			this.txtLoginPassword.Name = "txtLoginPassword";
+			this.txtLoginPassword.PasswordChar = '●';
+			this.txtLoginPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+			this.txtLoginPassword.PlaceholderText = "Password";
+			this.txtLoginPassword.SelectedText = "";
+			this.txtLoginPassword.Size = new System.Drawing.Size(268, 36);
+			this.txtLoginPassword.TabIndex = 2;
+			this.txtLoginPassword.UseSystemPasswordChar = true;
+			this.txtLoginPassword.IconRightClick += new System.EventHandler(this.txtLoginPassword_IconRightClick);
 			// 
 			// FrmLogin
 			// 

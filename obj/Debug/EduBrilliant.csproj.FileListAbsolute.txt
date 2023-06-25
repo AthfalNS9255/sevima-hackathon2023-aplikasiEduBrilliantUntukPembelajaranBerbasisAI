@@ -30,3 +30,4 @@ D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCKelasDetail.r
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCTransaksi.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControlsGuru.UCSoalItems.resources
 D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.FrmMainSiswa.resources
+D:\PROJECTS\EduBrilliant\obj\Debug\EduBrilliant.UserControls.UCDashboardGuru.resources
