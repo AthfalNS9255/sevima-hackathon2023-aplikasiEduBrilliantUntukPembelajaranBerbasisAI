@@ -4,6 +4,6 @@ Menggunakan SQL Server sebagai Database
 
 Ganti ConnectionString pada App.config sebelum menjalankan aplikasi
 
-Disarankan di run lewat visual studio
+Disarankan run lewat visual studio
 
 terdapat 2 opsi Backup Database(.sql dan .mdf .ldf)
