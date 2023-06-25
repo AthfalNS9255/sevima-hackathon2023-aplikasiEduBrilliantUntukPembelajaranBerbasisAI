@@ -2,4 +2,5 @@
 ## EduBrilliant Desktop
 Menggunakan SQL Server sebagai Database
 
-Ganti ConnectionString di App.config
+Ganti ConnectionString pada App.config sebelum menjalankan aplikasi
+
